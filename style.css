@@ -177,7 +177,7 @@ button:hover{
   background-image: url( images/image.jpg );
   background-size: cover;
   
-  animation: opaqTransition 5s cubic-bezier(0, 0, 0, 0.97) infinite;
+  animation: opaqTransition 50s cubic-bezier(0, 0, 0, 0.97) infinite;
 }
 
 
@@ -186,21 +186,21 @@ button:hover{
   background-image: url( images/1.jpg);
   background-position: center;
   background-size: cover;
-  animation-delay: 1s;
+  animation-delay: 10s;
 }
 
 .card_part.card_part-three {
 
   background-image: url( images/scene.jpeg );
   background-size: cover;
-  animation-delay: 2s;
+  animation-delay: 20s;
 }
 
 .card_part.card_part-four {
 
   background-image: url( images/alsobigboi.jpeg );
   background-size: cover;
-  animation-delay: 3s;
+  animation-delay: 30s;
 }
 
 .card_part.card_part-five {
@@ -208,7 +208,7 @@ button:hover{
   background-image: url( images/verticalPicTest.jpeg );
   background-size: cover;
   background-position: center;
-  animation-delay: 4s;
+  animation-delay: 40s;
 }
 
 
