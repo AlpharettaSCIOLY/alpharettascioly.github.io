@@ -5,7 +5,6 @@
     font-family: sans-serif; 
 }
 
-
 .navbar{
     width: 100%;
     height: 100vh; 
@@ -64,19 +63,6 @@
     color: #fff;
 }
 
-.banner_slideshow {
-    position:absolute;
-    top: 0;
-    width: 100%;
-    background-color: rgba(0,0,0,0.75);
-    opacity: 0.7;
-    z-index: -1;
-    transition: 0.5s;
-}
-.banner_slideshow img{
-    opacity: 0.1;
-}
-
 .BannerTitle h1{ 
     font-size: 70px;
     margin-top: 80px;
@@ -133,9 +119,6 @@ button:hover{
     border:none; 
 }
 
-
-
-
 /* slideshow stuff*/
 .card {
   position: absolute;
@@ -176,13 +159,14 @@ button:hover{
   transform: translateX( 100vw );
   background-image: url( images/image.jpg );
   background-size: cover;
+  background-position: center;
   
   animation: opaqTransition 50s cubic-bezier(0, 0, 0, 0.97) infinite;
 }
 
 
-.card_part.card_part-two {
 
+.card_part.card_part-two {
   background-image: url( images/1.jpg);
   background-position: center;
   background-size: cover;
@@ -193,6 +177,7 @@ button:hover{
 
   background-image: url( images/scene.jpeg );
   background-size: cover;
+  background-position: center;
   animation-delay: 20s;
 }
 
@@ -200,6 +185,7 @@ button:hover{
 
   background-image: url( images/alsobigboi.jpeg );
   background-size: cover;
+  background-position: center;
   animation-delay: 30s;
 }
 
@@ -224,59 +210,36 @@ button:hover{
 
 .detail_card {    
     display: grid;
-    grid-template-columns: 50vw 50vw;
-    grid-template-rows: 70vh;
-    height: 70vh;
-    background: transparent;
-}
-
-.split {
-    position: relative;
-    box-sizing: border-box; 
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-auto-rows: minmax(110vh, auto);
     padding-top: 20px;
-    overflow-x: hidden; 
+    padding-bottom: 20px;
+    overflow-x: hidden;
     background: black;
 }
 
-.split.left {
-    grid-column-start: 1;
-    grid-column-end: 2; 
-    grid-row-start: 1;
-    z-index: 2; 
-    left: 0;
-}
-
-.split.right {
-    grid-column-start: 2;
-    grid-column-end: 3; 
-    grid-row-start: 1;
-    z-index: 3; 
-    right: 0;
-}
-
 .center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-}
-
-.text {
-    box-sizing: border-box;
-    position: relative; 
-    background: white;
-    padding: 40px;
-    line-height: 1.7; 
-    border-radius: 20px;
-    margin: 50px auto;
 }
 
 .break {
     position: relative; 
     width: 100vw;
-    height: 5vh;
+    height: 50vh;
     background: transparent; 
 }
 
-/* have a fixed background picture that shows up after we scroll through a section */ 
+.fixed_background {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: -1;    
+}
+/* make a fixed background picture that shows up after we scroll through a section */ 
+
+/* Make the menu bar sticky once the banner title is-visible = false */
