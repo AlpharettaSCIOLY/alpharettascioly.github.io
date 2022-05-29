@@ -5,24 +5,26 @@
     font-family: sans-serif; 
 }
 
-.navbar{
+.navbar{ 
+    position: fixed;
     width: 100%;
-    height: 100vh; 
+    height: 70px; 
     text-align: center;
     text-decoration-color: aliceblue;
+    z-index: 1;
 }
 
 .navigationBar{
     width: 85%;
     margin: auto;
-    padding: 35px 0;
+    padding: 10px 0;
     display: flex; 
     align-items: center;
     justify-content: space-between;
 }
 
 .logo{
-    width:70px;
+    width:55px;
     cursor: pointer; 
 }
 
@@ -54,6 +56,9 @@
     width: 100%;
 }
 
+
+/* Make sure the banner title doesn't go off screen when the screen gets too small */
+/* Do something like I did for the cards */
 .BannerTitle{ 
     width: 100%; 
     position: absolute;
@@ -121,14 +126,12 @@ button:hover{
 
 /* slideshow stuff*/
 .card {
-  position: absolute;
-  top: 0;
+  position: relative;
   z-index: -1;
 
   width: 100vw;
   height: 100vh;    
   overflow: hidden;
-
 }
 
 /*Light blue cover above the slide show*/
@@ -161,7 +164,7 @@ button:hover{
   background-size: cover;
   background-position: center;
   
-  animation: opaqTransition 50s cubic-bezier(0, 0, 0, 0.97) infinite;
+  animation: opaqTransition 50s cubic-bezier(0, 0, 0, 0) infinite;
 }
 
 
@@ -211,7 +214,7 @@ button:hover{
 .detail_card {    
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-    grid-auto-rows: minmax(110vh, auto);
+    grid-auto-rows: minmax(100vh, auto);
     padding-top: 20px;
     padding-bottom: 20px;
     overflow-x: hidden;
@@ -243,3 +246,30 @@ button:hover{
 /* make a fixed background picture that shows up after we scroll through a section */ 
 
 /* Make the menu bar sticky once the banner title is-visible = false */
+
+.scrolling-active{
+    background-color: #fff;
+    box-shadow: 0 3px 1rem rgba(0,0,0,.1);
+    animation-delay: 1s;
+}
+
+.scrolling-active .nav{
+    height: 6.6rem;
+}
+
+.scrolling-active .nav a{
+    color: #313131;
+}
+
+.scrolling-active #nav-cta{
+    background-color: #313131;
+    color: #fff;
+}
+
+.scrolling-active #nav-cta:hover{
+    background-color: #151515;
+}
+
+.scrolling-active .nav-link::after{
+    background-color: #313131;
+}

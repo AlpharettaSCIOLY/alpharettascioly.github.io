@@ -56,5 +56,14 @@
 .text.is-visible {
         opacity: 1;
         -webkit-transform: translateY(0);
-                transform: rotateZ(0);
+                transform: translateY(0);
+}
+
+.BannerTitle.is-visible .navbar{
+        background-color: transparent;
+}
+
+.BannerTitle .navbar{ 
+        background-color: silver;
+        will-change: background-color;
 }
