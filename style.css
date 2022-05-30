@@ -213,7 +213,7 @@ button:hover{
 .detail_card {    
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-    grid-auto-rows: minmax(100vh, auto);
+    grid-auto-rows: minmax(85vh, auto);
     padding-top: 20px;
     padding-bottom: 20px;
     overflow-x: hidden;
@@ -264,4 +264,30 @@ especially since I just did this for fun and didn't really expect it to fix my p
 
 .scrolling-active .navigationBar ul li a{
     color: black;
+    transition: color 300ms linear;
+    text-transform: uppercase;
+}
+
+.scrolling-deactivated .navigationBar ul li a{
+    color: #fff;
+    transition: color 300ms linear;
+    text-transform: uppercase; 
+}
+
+.title {
+    position: relative; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    padding: 20px 0;
+}
+
+.title-text{
+    font-size: 50px;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
