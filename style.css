@@ -163,7 +163,7 @@ button:hover{
   background-size: cover;
   background-position: center;
   
-  animation: opaqTransition 50s cubic-bezier(0, 0, 0, 0) infinite;
+  animation: opaqTransition 50s cubic-bezier(0, 0, 0, 1) infinite;
 }
 
 
