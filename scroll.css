@@ -28,15 +28,6 @@
 }
 
 .text {
-        box-sizing: border-box;
-        position: relative; 
-        background: white;
-        padding: 40px;
-        line-height: 1.7; 
-        border-radius: 20px;
-        margin: 50px auto;
-
-        box-shadow: 1em 1em 2em .25em rgba(0,0,0,.2);
         opacity: 0;
         -webkit-transform: translateY(8em);
                 transform: translateY(8em);
