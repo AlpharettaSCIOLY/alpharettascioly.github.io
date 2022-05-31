@@ -3,7 +3,7 @@
     <head>
         <title>Contact</title> 
 
-        <link rel="stylesheet" href="about-us-styles.css">
+        <link rel="stylesheet" href="subpages-styles.css">
         <link rel="stylesheet" href="nav.css">
         <link rel="stylesheet" href="scroll.css">
     </head>
@@ -19,6 +19,7 @@
                         <li><a href="H">Events</a></li>
                         <li><a href="H">Resources</a></li>
                         <li><a href="H">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
             </nav>
@@ -40,20 +41,20 @@
         <!--Email starts-->
         <div class="detail-card">
                 <div class="header-text">
-                    Header text
+                    Email Us
                     <div class="text-break"></div>
                 </div>
 
                 <!--Email sender starts-->
                 <div class="email">
-
+                    <form class="email-sender" action="https://formsubmit.co/alpharettascioly04@gmail.com" method="POST">
+                        <input class="email-address" type="email" name="email" placeholder="Email Address" required>
+                        <input class="email-name" type="text" name="name" placeholder="Name" required>
+                        <input class="email-content" type="text" name="email-content" required>
+                        <button class="email-submit" type="submit">Send</button>
+                        <input type="hidden" name="_captcha" value="false">
+                   </form>
                 </div>
-                <form action="https://formsubmit.co/alpharettascioly04@gmail.com" method="POST">
-                    <input type="email" name="email" placeholder="Email Address" required>
-                    <input type="text" name="name" placeholder="Name" required>
-                    <input type="text" name="email-content" required>
-                    <button type="submit">Send</button>
-               </form>
                <!--Email sender ends-->
 
             <script src="show-on-scroll.js"></script>
