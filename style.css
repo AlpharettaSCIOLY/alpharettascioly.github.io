@@ -108,6 +108,8 @@ button:hover{
   
   transform: translateX( 100vw );
   background-image: url( images/image.jpg );
+  background-color: rgba(0,0,0,0.7);
+  background-blend-mode: multiply;
   background-size: cover;
   background-position: center;
   
@@ -118,34 +120,27 @@ button:hover{
 
 .card_part.card_part-two {
   background-image: url( images/1.jpg);
-  background-position: center;
-  background-size: cover;
   animation-delay: 10s;
 }
 
 .card_part.card_part-three {
 
   background-image: url( images/scene.jpeg );
-  background-size: cover;
-  background-position: center;
   animation-delay: 20s;
 }
 
 .card_part.card_part-four {
 
   background-image: url( images/alsobigboi.jpeg );
-  background-size: cover;
-  background-position: center;
   animation-delay: 30s;
 }
 
 .card_part.card_part-five {
 
   background-image: url( images/verticalPicTest.jpeg );
-  background-size: cover;
-  background-position: center;
   animation-delay: 40s;
 }
+
 
 
 @keyframes opaqTransition {
@@ -158,6 +153,31 @@ button:hover{
 
 /* The information part of the homepage */ 
 
+.title {
+    position: relative; 
+    background-color: black;
+    padding: 20px 0;
+}
+
+.title-text {
+    font-size: 50px;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: bolder;
+}
+
+.text-break{
+    content: '';
+    height: 3px;
+    width: 100%;
+    background: white;
+    margin-top: 20px;
+    margin-bottom: 20px
+}
+
 .detail_card {    
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
@@ -166,6 +186,32 @@ button:hover{
     padding-bottom: 20px;
     overflow-x: hidden;
     background: black;
+}
+
+.detail_card_2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-auto-rows: minmax(85vh, auto);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    overflow-x: hidden;
+    background: black;
+}
+
+.detail_card_2 h1{
+    color: white;
+    margin-bottom: 25px;
+}
+
+.detail_card_2 p{
+    color: white;
+}
+
+.center-2{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
 }
 
 .center {
@@ -201,23 +247,4 @@ button:hover{
     width: 100%;
     height: 100%;
     z-index: -1;
-}
-
-.title {
-    position: relative; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: black;
-    padding: 20px 0;
-}
-
-.title-text {
-    font-size: 50px;
-    text-align: center;
-    color: white;
-    text-transform: uppercase;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    font-weight: bolder;
 }
