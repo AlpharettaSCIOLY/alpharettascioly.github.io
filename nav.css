@@ -51,6 +51,16 @@
     width: 100%;
 }
 
+.navigationBar ul li ul li {
+    display: none;
+}
+
+.navigationBar ul li:hover ul li {
+    display: flex;
+    flex-direction: column;
+    background-color: grey;
+}
+
 .scrolling-active{
     background-color: silver;
     -webkit-transition: background-color 500ms linear;
