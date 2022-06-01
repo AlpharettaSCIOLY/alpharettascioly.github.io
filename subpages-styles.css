@@ -27,6 +27,7 @@
     position: relative;
     background-color: grey;
 }
+
 .header-text{
     padding-top: 50px;
     margin-left: 50px;
@@ -46,7 +47,7 @@
     margin-bottom: 20px
 }
 
-.moretext{
+.text{
     padding-left: 50px;
     padding-right: 50px;
     padding-bottom: 50px;
