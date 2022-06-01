@@ -190,11 +190,10 @@ button:hover{
 
 .detail_card_2 {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-template-columns: repeat(3, 33.34%);
     grid-auto-rows: minmax(85vh, auto);
     padding-top: 20px;
-    padding-bottom: 20px;
-    overflow-x: hidden;
+    padding-bottom: 25px;
     background: black;
 }
 
@@ -205,6 +204,12 @@ button:hover{
 
 .detail_card_2 p{
     color: white;
+}
+
+.center-3{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .center-2{
@@ -221,14 +226,29 @@ button:hover{
     text-align: center;
 }
 
-.text {
-    box-sizing: border-box;
-    position: relative; 
-    background: white;
-    padding: 40px;
-    line-height: 1.7; 
-    border-radius: 20px;
-    margin: 20px auto;
+.detail_card_3 {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: black;
+}
+
+.detail_card_4{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-auto-rows: minmax(85vh, auto);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: black;
+}
+
+.padding {
+    padding: 20px; 
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .break {
