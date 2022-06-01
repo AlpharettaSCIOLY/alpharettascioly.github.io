@@ -31,9 +31,31 @@
 .navigationBar ul li a{
     text-decoration: none;
     color: #fff;
-    -webkit-text-stroke: 0.3px black;
+    display: block; 
+    line-height: 60px;
 
     text-transform: uppercase; 
+}
+
+.navigationBar ul ul {
+    position: absolute; 
+    top: 60px; 
+    display: none; 
+}
+
+.navigationBar ul li:hover > ul {
+    display: block; 
+}
+
+.navigationBar ul ul li{
+    padding-right: 20px;
+    padding-left: 20px;
+    float: none; 
+    display: list-item;
+    width: auto;
+    white-space: nowrap;
+    position: relative; 
+    transform: translateX(-20px);
 }
 
 .navigationBar ul li::after{
@@ -43,8 +65,10 @@
     background: #89142e;
     position: absolute;
     left: 0; 
+    top: calc(100% - 0.5rem);
     bottom: -10px;
     transition: 0.5s; 
+    z-index: 10000;
 }
 
 .navigationBar ul li:hover::after{
@@ -82,7 +106,6 @@ especially since I just did this for fun and didn't really expect it to fix my p
     color: black;
     transition: color 300ms linear;
     text-transform: uppercase;
-    -webkit-text-stroke: 0px;
 }
 
 .scrolling-deactivated .navigationBar ul li a{
