@@ -268,3 +268,21 @@ button:hover{
     height: 100%;
     z-index: -1;
 }
+
+@media only screen and (max-width: 480px) {
+    .detail_card_2 {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: repeat(3, 33.34%);
+        padding-top: 20px;
+        padding-bottom: 25px;
+        background: black;
+    }
+}
+
+.header-logo { 
+    position: absolute; 
+    left: 50%;
+    top: 50%;
+    z-index: 10000000;
+}
