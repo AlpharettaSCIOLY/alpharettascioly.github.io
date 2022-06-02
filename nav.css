@@ -110,6 +110,7 @@ especially since I just did this for fun and didn't really expect it to fix my p
 
         padding: min(30vh, 10rem) 2em; 
         background: hsl(0 0% 0%/ 0.75);
+        overflow: scroll;
 
         text-decoration-color: aliceblue;
     }
@@ -118,15 +119,44 @@ especially since I just did this for fun and didn't really expect it to fix my p
         width: 85%;
         margin: auto;
         padding: 10px 0;
+
+        display: flex;
         justify-content: center;
-        align-items: center;
     }
 
     .navigationBar ul {
-        --gap: 50px;
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 20%);
+        grid-auto-rows: minmax(1000px, auto);
         overflow: scroll;
+    }
+
+    .navigationBar ul ul {
+        display: none;
+    }
+    
+    .navigationBar ul li:hover{
+
+    }
+
+    .navigationBar ul li:hover > ul {
+        display: inline-block; 
+    }
+    
+    .navigationBar ul ul li{
+        width: auto;
+        white-space: nowrap;
+    }
+
+    .navigationBar ul li ul li {
+        display: none;
+    }
+    
+    .navigationBar ul li:hover ul li {
+        display: grid;
+
+        background:hsl(0 0% 100%/0.1);
     }
 
     @supports (backdrop-filter: blur(3rem)) {
