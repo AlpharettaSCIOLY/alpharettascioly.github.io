@@ -41,6 +41,7 @@
 
 .navigationBar ul li:hover > ul {
     display: block; 
+    z-index: 100000000;
 }
 
 .navigationBar ul ul li{

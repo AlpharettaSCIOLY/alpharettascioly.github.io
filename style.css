@@ -3,7 +3,6 @@
     margin: 0;
     padding: 0;
     font-family: sans-serif; 
-    overflow-x: hidden;
 }
 
 /* Make sure the banner title doesn't go off screen when the screen gets too small */
@@ -274,6 +273,12 @@ button:hover{
 }
 
 @media (max-width: 550px) {
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif; 
+    }
     .detail_card_2 {
         display: grid;
         grid-template-columns: 1fr;
