@@ -112,7 +112,7 @@ especially since I just did this for fun and didn't really expect it to fix my p
 
 
 /*Make sure the smaller screenn gets a smaller font */
-@media (max-width: 1800px) {
+@media screen and (max-width: 1800px) {
     .navbar{ 
         position: fixed;
         inset: 0 0 0 30%;
@@ -209,7 +209,7 @@ especially since I just did this for fun and didn't really expect it to fix my p
 
 .stuff {
     position: fixed;
-    width: 100%;
+    width: 100vw;
     height: 70px; 
     text-align: center;
     text-decoration-color: aliceblue;
