@@ -31,7 +31,7 @@
 .navigationBar ul ul {
     position: absolute; 
     top: 60px; 
-    display: none; 
+    display: none;
 }
 
 .navigationBar ul li:hover > ul {
@@ -49,6 +49,7 @@
     transform: translateX(-20px);
 }
 
+/* Instead of having the underline show up below a "ul li", have it show up below a div or just under a class */
 .navigationBar ul li::after{
     content: '';
     height: 3px; 
@@ -64,10 +65,6 @@
 
 .navigationBar ul li:hover::after{
     width: 100%;
-}
-
-.navigationBar ul li ul li {
-    display: none;
 }
 
 .navigationBar ul li:hover ul li {
@@ -103,60 +100,59 @@ especially since I just did this for fun and didn't really expect it to fix my p
     transition: color 300ms linear;
 }
 
-@media (max-width: 700px) {
+
+/*Make sure the smaller screenn gets a smaller font */
+@media (max-width: 1800px) {
     .navbar{ 
         position: fixed;
         inset: 0 0 0 30%;
 
-        padding: min(30vh, 10rem) 2em; 
+        padding: 2em; 
         background: hsl(0 0% 0%/ 0.75);
         overflow: scroll;
+        font-size: 45px;
 
         text-decoration-color: aliceblue;
     }
 
     .navigationBar{
         width: 85%;
-        margin: auto;
         padding: 10px 0;
 
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
+    }
+
+    .navigationBar ul li{
+        list-style: none; 
+        display: flex; 
+        justify-content: flex-start;
+        position: relative;
+        flex-wrap: wrap;
+        margin: 30px;
     }
 
     .navigationBar ul {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(5, 20%);
-        grid-auto-rows: minmax(1000px, auto);
-        overflow: scroll;
+        grid-template-rows: repeat(5, auto);
     }
 
     .navigationBar ul ul {
-        display: none;
-    }
-    
-    .navigationBar ul li:hover{
-
-    }
-
-    .navigationBar ul li:hover > ul {
-        display: inline-block; 
+        position: relative; 
+        left: 20%;
+        top: 0;
     }
     
     .navigationBar ul ul li{
-        width: auto;
         white-space: nowrap;
     }
 
-    .navigationBar ul li ul li {
-        display: none;
-    }
-    
     .navigationBar ul li:hover ul li {
-        display: grid;
-
-        background:hsl(0 0% 100%/0.1);
+        display: flex;
+        flex-direction: column;
+        justify-content: right;
+        background-color: transparent;
     }
 
     @supports (backdrop-filter: blur(3rem)) {
