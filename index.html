@@ -19,23 +19,21 @@
                     <a href ="index.html"><img src="images/Alpharetta_Logo.png" class="logo"></a>
                 </div>  
 
-                <buttton class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
-                    <span class="sr-only">Menu</span>
-                </buttton>
+                <buttton class="mobile-nav-toggle button-2" aria-controls="primary-navigation" aria-expanded="false"></buttton>
 
-                <nav class="navbar">
+                <nav class="navbar" data-visible="false" id="primary-navigation">
                     <div class="navigationBar">
                         <ul class="primary-navigation">
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="#">Events</a></li>
-                            <li><a href="#">Resources ▼</a>
+                            <li><a class="link" href="index.html">Home</a></li>
+                            <li><a class="link" href="#">Events</a></li>
+                            <li><a class="link" href="#">Resources ▼</a>
                                 <ul>
-                                    <li><a href="#">Meeting Notes</a></li>
-                                    <li><a href="#">Event Notes</a></li>
+                                    <li><a class="link" href="#">Meeting Notes</a></li>
+                                    <li><a class="link" href="#">Event Notes</a></li>
                                 </ul>
                             </li>
-                            <li><a href="about-us.html">About Us</a></li>
-                            <li><a href="contact.html">Contact</a></li>
+                            <li><a class="link" href="about-us.html">About Us</a></li>
+                            <li><a class="link" href="contact.html">Contact</a></li>
                         </ul>
                     </div>
                 </nav>
@@ -43,6 +41,7 @@
 
             <script src="at-the-top.js"></script>
             <script src="navbar.js"></script>
+            <script src="nav.js"></script>
         </header>
 
 
@@ -53,9 +52,9 @@
                 <h1>Alpharetta High School SCIOLY</h1>
                 <h2>Duct Tape and Hope</h2>
                 <p>The Science Olympiad Team located in<br>Alpharetta High School</p>
-                <div class="button">
-                    <button type="button"><span></span>Sign Up</button>
-                    <button type="button"><span></span>About Us</button>
+                <div>
+                    <button class="button-1" type="button"><span class="span-1"></span>Sign Up</button>
+                    <button class="button-1" type="button"><span class="span-1"></span>About Us</button>
                 </div>
             </div>
 

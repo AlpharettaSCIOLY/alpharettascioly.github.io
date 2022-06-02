@@ -39,8 +39,8 @@
 }
 
 /* Make sure that we have button classes for the different types of buttons now */
-/*
-button{
+
+.button-1{
     width: 200px; 
     padding: 15px 0;
     text-align: center;
@@ -55,7 +55,7 @@ button{
     overflow: hidden; 
 }
 
-span{
+.span-1{
     background: #009688;
     height: 100%; 
     width: 0; 
@@ -66,7 +66,7 @@ span{
     z-index: -1;
     transition: 0.5s; 
 }
-*/
+
 button:hover span{
     width: 100%;
 }
