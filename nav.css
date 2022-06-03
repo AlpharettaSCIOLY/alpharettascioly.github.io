@@ -109,7 +109,7 @@
 
     .navigationBar{
         width: 100%;
-        padding: 0;
+        padding: 10px 0;
 
         display: flex;
         justify-content: flex-start;
@@ -177,10 +177,12 @@
         position: fixed;
         inset: 0 0 0 0;
 
-        padding: 2em; 
+        padding-top: 2em;
+        padding-left: 1em; 
+        padding-right: 0;
         background: hsl(0 0% 0%/ 0.75);
         overflow: scroll;
-        font-size: 45px;
+        font-size: 38px;
 
         text-decoration-color: aliceblue;
         /* Moves the menu off of the screen */
@@ -213,8 +215,8 @@
 
     .navigationBar ul ul {
         position: relative; 
-        top: calc(0% + 1rem);
-        left: calc(0% + 3rem);
+        top: calc(0% + 40px);
+        left: calc(0% + 15px);
     }
 
     .navigationBar ul ul.show{
