@@ -172,7 +172,7 @@
     }   
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 900px) {
     .navbar{ 
         position: fixed;
         inset: 0 0 0 0;
