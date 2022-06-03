@@ -128,7 +128,7 @@
 
     .navigationBar ul ul {
         position: relative; 
-        top: calc(0% + 1rem);
+        top: calc(0% + 40px);
         left: calc(0% + 3rem);
     }
 
