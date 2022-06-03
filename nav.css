@@ -9,6 +9,7 @@
     display: flex; 
     align-items: center;
     justify-content: right;
+    
 }
 
 .logo{
@@ -83,34 +84,6 @@
     flex-direction: column;
     background-color: grey;
 }
-
-.scrolling-active{
-    background: hsl(0 0% 0%/ 0.75);
-    -webkit-transition: background-color 500ms linear;
-    -ms-transition: background-color 500ms linear;
-    transition: background-color 500ms linear;
-}
-
-/* I don't know why this allows the navbar to fade out but it does and I'm not going to question it anymore, 
-especially since I just did this for fun and didn't really expect it to fix my problem  */
-/* I know I can just make the background-color transparent to make it look it its supposed to belong but I don't care anymore*/
-.scrolling-deactivated {
-    background-color: linear-gradient(red, blue);
-    -webkit-transition: background-color 500ms linear;
-    -ms-transition: background-color 500ms linear;
-    transition: background-color 500ms linear;
-}
-
-.scrolling-active .navigationBar ul li a{
-    -webkit-text-stroke: 0.5px #000;
-    transition: color 300ms linear;
-}
-
-.scrolling-deactivated .navigationBar ul li a{
-    -webkit-text-stroke: 0;
-    transition: color 300ms linear;
-}
-
 
 /*Make sure the smaller screenn gets a smaller font */
 @media screen and (max-width: 1800px) {
@@ -202,7 +175,7 @@ especially since I just did this for fun and didn't really expect it to fix my p
 }
 
 @supports (backdrop-filter: blur(3rem)) {
-    .scrolling-active{
+    .navigationBar{
         background: hsl(0 0% 100%/0.1);
         backdrop-filter: blur(3rem);
     }
