@@ -9,7 +9,6 @@
     display: flex; 
     align-items: center;
     justify-content: right;
-    
 }
 
 .logo{
@@ -40,9 +39,11 @@
     display: none;
 }
 
-.navigationBar ul li:hover > ul {
-    display: block; 
-    z-index: 100000000;
+@media screen and (min-width: 1001px) {
+    .navigationBar ul li:hover > ul {
+        display: block; 
+        z-index: 100000000;
+    }
 }
 
 .navigationBar ul ul li{
@@ -86,7 +87,7 @@
 }
 
 /*Make sure the smaller screenn gets a smaller font */
-@media screen and (max-width: 1800px) {
+@media screen and (max-width: 1000px) {
     .navbar{ 
         position: fixed;
         inset: 0 0 0 30%;
@@ -131,16 +132,13 @@
         left: calc(0% + 3rem);
     }
 
-    .navigationBar ul ul:hover {
+    .navigationBar ul ul.show{
         display: block;
-        flex-direction: column;
-        background-color: transparent;
     }
     
     .navigationBar ul ul li{
         white-space: nowrap;
     }
-    
     
     .navigationBar ul li:hover ul li {
         background-color: transparent;
@@ -171,14 +169,92 @@
             background: hsl(0 0% 100%/0.1);
             backdrop-filter: blur(3rem);
         }
-    }
+    }   
 }
 
-@supports (backdrop-filter: blur(3rem)) {
-    .navigationBar{
-        background: hsl(0 0% 100%/0.1);
-        backdrop-filter: blur(3rem);
+@media screen and (max-width: 1000px) {
+    .navbar{ 
+        position: fixed;
+        inset: 0 0 0 0;
+
+        padding: 2em; 
+        background: hsl(0 0% 0%/ 0.75);
+        overflow: scroll;
+        font-size: 45px;
+
+        text-decoration-color: aliceblue;
+        /* Moves the menu off of the screen */
+        transform: translateX(100%); 
+        transition: transform 350ms ease-in-out;
     }
+
+    .navbar[data-visible="true"] {
+        transform: translateX(0);
+    }
+
+    .navigationBar{
+        width: 100%;
+        padding: 10px 0;
+
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .navigationBar ul li{
+        padding-bottom: 50px;
+    }
+
+    .navigationBar ul {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, auto);
+        text-align: left;
+    }
+
+    .navigationBar ul ul {
+        position: relative; 
+        top: calc(0% + 1rem);
+        left: calc(0% + 3rem);
+    }
+
+    .navigationBar ul ul.show{
+        display: block;
+    }
+    
+    .navigationBar ul ul li{
+        white-space: nowrap;
+    }
+    
+    .navigationBar ul li:hover ul li {
+        background-color: transparent;
+    }
+    
+
+    .mobile-nav-toggle { 
+        display: block;
+        position: absolute;
+        z-index: 1000;
+        background: url(images/Hamburger_Icon.svg.png); 
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        width: 2rem;
+        aspect-ratio: 1/1;
+        border: 0;
+        top: 2rem; 
+        right: 10rem;
+    }
+
+    .mobile-nav-toggle[aria-expanded="true"] {
+        background-image: url("images/Icon-Close.png");
+    }
+
+    @supports (backdrop-filter: blur(3rem)) {
+        .navbar{
+            background: hsl(0 0% 100%/0.1);
+            backdrop-filter: blur(3rem);
+        }
+    }   
 }
 
 .stuff {
@@ -197,4 +273,15 @@
     display: flex; 
     align-items: center;
     justify-content: left;
+}
+
+.header-blur {
+    position: fixed;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 80px; 
+    background: hsl(0 0% 100%/0.1);
+    backdrop-filter: blur(3rem);
+    z-index: 10;
 }
