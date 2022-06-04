@@ -16,7 +16,7 @@
     grid-column-end: 3;
     max-height: 0px;
     overflow: hidden;
-    transition: max-height 0.5s ease-in;
+    transition: max-height 0.5s ease-in-out;
     position: relative;
 
     display: flex; 
@@ -67,15 +67,17 @@
 }
 
 @media screen and (min-width: 1000px) {
-    *{
-        overflow-x: hidden;
-    }
     .the-detail {
         min-width: 1000px;
         min-height: 300px; 
     }
 }
 
+@media screen and (max-width: 1000px) {
+    *{
+        overflow-x: hidden;
+    }
+}
 
 button:hover{
     cursor: pointer;
