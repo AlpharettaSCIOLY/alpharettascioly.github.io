@@ -1,5 +1,6 @@
 var More;
 var Stuff;
+var Chevron
 
 var nums; 
 
@@ -15,7 +16,9 @@ for (var i = 0; i <= btnCount; i += 1) {
 
         More = document.querySelectorAll(".menu")[num];
         Stuff = document.querySelectorAll(".dropdown")[num];
+        Chevron = document.querySelectorAll(".chevron")[num];
 
         Stuff.classList.toggle("expanded");
+        Chevron.classList.toggle("rotate");
         }
 }

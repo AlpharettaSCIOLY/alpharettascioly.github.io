@@ -100,7 +100,7 @@
 }
 
 /*Make sure the smaller screenn gets a smaller font */
-@media screen and (max-width: 1000px) and (min-width: 900px) {
+@media screen and (max-width: 1050px) {
     .navbar{ 
         position: fixed;
         inset: 0 0 0 30%;
@@ -142,7 +142,7 @@
     .navigationBar ul ul {
         max-height: 0px;
         overflow: hidden;
-        transition: max-height 0.5s ease-in;
+        transition: max-height 0.5s ease;
 
         position: relative; 
         top: calc(0% + 40px);
@@ -159,25 +159,27 @@
         white-space: nowrap;
     }
 
-    
+    .navigationBar ul li button {
+        font-size: 45px;
+    }  
 
     .mobile-nav-toggle { 
         display: block;
         position: absolute;
         z-index: 1000;
-        background: url(images/Hamburger_Icon.svg.png); 
+        background: url("images/Hamburger_Icon.png"); 
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
         width: 2rem;
-        aspect-ratio: 1/1;
+        aspect-ratio: 1;
         border: 0;
         top: 2rem; 
         right: 10rem;
     }
 
     .mobile-nav-toggle[aria-expanded="true"] {
-        background-image: url("images/Icon-Close.png");
+        background-image: url("images/Icon_Close.png");
     }
 
     @supports (backdrop-filter: blur(3rem)) {
@@ -187,6 +189,7 @@
         }
     }   
 }
+
 
 @media screen and (max-width: 900px) {
     .navbar{ 
@@ -202,8 +205,8 @@
 
         text-decoration-color: aliceblue;
         /* Moves the menu off of the screen */
-        transform: translateX(100%); 
-        transition: transform 350ms ease-in-out;
+        transform: translateX(100%);            
+        transition: transform 350ms ease;
     }
 
     .navbar[data-visible="true"] {
@@ -225,14 +228,15 @@
     .navigationBar ul {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(5, auto);
+        grid-template-rows: repeat(6, auto);
         text-align: left;
     }
 
     .navigationBar ul ul {
         max-height: 0px;
+        transform: rotate(0deg);
         overflow: hidden;
-        transition: max-height 0.5s ease-in;
+        transition: max-height 0.5s ease-in, transform 0.5s linear;
 
         position: relative; 
         top: calc(0% + 40px);
@@ -244,15 +248,19 @@
     .navigationBar ul ul.expanded{
         max-height: 1000px;
     }
+
+    .navigationBar ul ul.expanded img {
+        transform: rotate(180deg);
+    }
+
+    @-keyframes spin1 {
+        0% { transform: rotate(0deg);}
+        100% { transform: rotate(180deg);}
+        } 
     
     .navigationBar ul ul li{
         white-space: nowrap;
     }
-    
-    .navigationBar ul li:hover ul li {
-        background-color: transparent;
-    }
-    
 
     .mobile-nav-toggle { 
         display: block;
@@ -284,6 +292,7 @@
         }
     }   
 }
+
 
 .stuff {
     position: fixed;
@@ -319,3 +328,22 @@
         backdrop-filter: blur(3rem);
     }
 }  
+
+
+.chevron {
+    aspect-ratio: 1;
+    width: 45px;
+    transform: rotate(0deg);
+
+    transition: transform 0.5s ease-in-out;
+}
+
+.chevron.rotate {
+    transform: rotate(180deg);
+}
+
+.does-it-fit {
+    display: flex;
+    flex-direction: row;
+
+}
