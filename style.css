@@ -191,19 +191,16 @@ button:hover span{
 .detail_card_2 {
     display: grid;
     grid-template-columns: repeat(3, 33.34%);
-    grid-auto-rows: minmax(85vh, auto);
+    grid-auto-rows: minmax(75vh, auto);
     padding-top: 20px;
     padding-bottom: 25px;
     background: black;
+    color: white;
+    
 }
 
 .detail_card_2 h1{
-    color: white;
     margin-bottom: 25px;
-}
-
-.detail_card_2 p{
-    color: white;
 }
 
 .center-3{
@@ -237,8 +234,8 @@ button:hover span{
 
 .detail_card_4{
     display: grid;
-    grid-template-columns: 50% 50%;
-    grid-auto-rows: minmax(85vh, auto);
+    grid-template-columns: 60% 40%;
+    grid-auto-rows: minmax(65vh, auto);
     padding-top: 20px;
     padding-bottom: 20px;
     background: black;
