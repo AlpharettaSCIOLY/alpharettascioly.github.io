@@ -1,23 +1,21 @@
-const menus = document.querySelectorAll('.menu')
-const dropdown = document.querySelector('.dropdown')
-let activeMenu = null
+var More;
+var Stuff;
 
-menus.forEach(menu => {
-  menu.addEventListener('click', e => {
-    // Removing previous active menu that is not itself
-    if (activeMenu && activeMenu !== menu) {
-      activeMenu.classList.remove('clicked')
-      activeMenu = menu
-    }
-    else if (activeMenu && activeMenu === menu) {
-      activeMenu = null
-    } else {
-      activeMenu = menu
-    }
-    
-    menu.classList.toggle('clicked')
-    // If there is an active menu, show
-    if (activeMenu) dropdown.classList.add('show')
-    else dropdown.classList.remove('show')
-  })
-})
+var nums; 
+
+var btn = document.querySelectorAll(".menu");
+var btnCount = btn.length;
+
+
+
+for (var i = 0; i <= btnCount; i += 1) {
+  btn[i].onclick = function(e) {
+    num = (this.id);
+    console.log(num);
+
+        More = document.querySelectorAll(".menu")[num];
+        Stuff = document.querySelectorAll(".dropdown")[num];
+
+        Stuff.classList.toggle("expanded");
+        }
+}

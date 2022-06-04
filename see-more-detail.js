@@ -7,7 +7,7 @@ var buttons = document.querySelectorAll(".button-1");
 var buttonsCount = buttons.length;
 for (var i = 0; i <= buttonsCount; i += 1) {
     buttons[i].onclick = function(e) {
-        num = 1 * (this.id);
+        num = (this.id);
         console.log(num);
 
         seeMore = document.querySelectorAll(".button-1")[num];

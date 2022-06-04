@@ -21,16 +21,21 @@
                     <a href ="index.html"><img src="images/Alpharetta_Logo.png" class="logo"></a>
                 </div>  
 
-                <buttton class="mobile-nav-toggle button-2" aria-controls="primary-navigation" aria-expanded="false"></buttton>
+                <buttton class="mobile-nav-toggle button-nav" aria-controls="primary-navigation" aria-expanded="false"></buttton>
 
                 <nav class="navbar" data-visible="false" id="primary-navigation">
                     <div class="navigationBar">
                         <ul class="primary-navigation">
                             <li><a class="link" href="index.html">Home</a></li>
-                            <li><a class="link" href="events.html">Events</a></li>
+                            <li><a href="events.html">Events</a><button class="link menu" id=0>▼</button> <!--Maybe make the triangle a button-->
+                                <ul class="dropdown" id=0>
+                                    <li><a class="link" href="#">Stuff</a></li>
+                                    <li><a class="link" href="#">Results</a></li> <!--Maybe a spreadsheet?-->
+                                </ul>
+                            </li>
                             <li><a class="link" href="calendar.html">Calendar</a></li>
-                            <li><a class="link menu" href="#">Resources ▼</a>
-                                <ul class="dropdown">
+                            <li><button class="link menu" id=1 href="#">Resources ▼</button>
+                                <ul class="dropdown" id=1>
                                     <li><a class="link" href="#">Meeting Notes</a></li>
                                     <li><a class="link" href="#">Event Notes</a></li>
                                 </ul>
@@ -71,15 +76,23 @@
                         <div class="image-2" id="img-1"></div>
 
                         <div class="event-detail">
-                            <h1>Anatomy & Physiology</h1>
-                            <p>This is what this event is about</p>
-                            <button class="button-1" type="button" id="0"><span class="span-1"></span>See More</button>
+                            <h1>
+                                Anatomy & Physiology
+                                <div class="text-break"></div>
+                            </h1>
+                            <p>This is what this event is about. There is just so much to talk about but too little time in this world to talk about it. I wish that there was a way to increase the time in our lives or just be able go back and fix mistakes that will later cost our future selves greatly.</p>
+                            <button class="button-1" type="button" id=0><span class="span-1"></span>See More</button>
                         </div>
     
-                        <div class="see-moree" id="0">
-                            <p class="text-detail">
-                                huaeirfjkznd;erjldrrdijrdjri  irir ridirdir dirriurdridirgdirgx dr gdix rigdx ridgx irxdg
-                            </p>
+                        <div class="see-moree" id=0>
+                            <!--The background image behind "see-moree"-->
+                            <img class="background-image" src="images/verticalPicTest.jpeg">
+
+                            <div class="text-detail">
+                                <p class="the-text">
+                                    huaeirfjkznd;erjldrrdijrdjri  irir ridirdir dirriurdridirgdirgx dr gdix rigdx ridgx irxdg
+                                </p>
+                            </div>
                             <div class="buttons">
                                 <button class="button-2 1" type="button"><span class="span-1"></span>Rules</button>
                                 <button class="button-2 2" type="button"><span class="span-1"></span>More Info</button>
@@ -94,12 +107,18 @@
                         <div class="image-2" id="img-2"></div>
 
                         <div class="event-detail">
-                            <h1>Bio Process Lab</h1>
-                            <p>This is what this event is about</p>
-                            <button class="button-1" type="button" id="1"><span class="span-1"></span>See More</button>
+                            <h1>
+                                Bio Process Lab
+                                <div class="text-break"></div>
+                            </h1>
+                            <p>This is what this event is about. I think I'm nearly finished with this.........</p>
+                            <button class="button-1" type="button" id=1><span class="span-1"></span>See More</button>
                         </div>
     
-                        <div class="see-moree" id="1">
+                        <div class="see-moree" id=1>
+                            <!--The background image behind "see-moree"-->
+                            <img class="background-image" src="images/scene.jpeg">
+
                             <p class="text-detail">
                                 huaeirfjkznd;erjldrrdijrdjri  irir ridirdir dirriurdridirgdirgx dr gdix rigdx ridgx irxdg
                             </p>
@@ -117,12 +136,18 @@
                         <div class="image-2" id="img-3"></div>
 
                         <div class="event-detail">
-                            <h1>Disease Detectives</h1>
-                            <p>This is what this event is about</p>
-                            <button class="button-1" type="button" id="2"><span class="span-1"></span>See More</button>
+                            <h1>
+                                Disease Detectives
+                                <div class="text-break"></div>
+                            </h1>
+                            <p>This is what this event is about. There is just so much to talk about but too little time in this world to talk about it. I wish that there was a way to increase the time in our lives or just be able go back and fix mistakes that will later cost our future selves greatly.</p>
+                            <button class="button-1" type="button" id=2><span class="span-1"></span>See More</button>
                         </div>
     
-                        <div class="see-moree" id="2">
+                        <div class="see-moree" id=2>
+                            <!--The background image behind "see-moree"-->
+                            <img class="background-image" src="images/alsobigboi.jpeg">
+
                             <p class="text-detail">
                                 huaeirfjkznd;erjldrrdijrdjri  irir ridirdir dirriurdridirgdirgx dr gdix rigdx ridgx irxdg
                             </p>
@@ -140,12 +165,18 @@
                         <div class="image-2" id="img-4"></div>
 
                         <div class="event-detail">
-                            <h1>Green Generation</h1>
+                            <h1>
+                                Green Generation
+                                <div class="text-break"></div>
+                            </h1>
                             <p>This is what this event is about</p>
-                            <button class="button-1" type="button" id="3"><span class="span-1"></span>See More</button>
+                            <button class="button-1" type="button" id=3><span class="span-1"></span>See More</button>
                         </div>
     
-                        <div class="see-moree" id="3">
+                        <div class="see-moree" id=3>
+                            <!--The background image behind "see-moree"-->
+                            <img class="background-image" src="images/vector.webp">
+
                             <p class="text-detail">
                                 huaeirfjkznd;erjldrrdijrdjri  irir ridirdir dirriurdridirgdirgx dr gdix rigdx ridgx irxdg
                             </p>
@@ -163,12 +194,63 @@
                         <div class="image-2" id="img-5"></div>
 
                         <div class="event-detail">
-                            <h1>Ornithology</h1>
+                            <h1>
+                                Ornithology
+                                <div class="text-break"></div>
+                            </h1>
                             <p>This is what this event is about</p>
-                            <button class="button-1" type="button" id="4"><span class="span-1"></span>See More</button>
+                            <button class="button-1" type="button" id=4><span class="span-1"></span>See More</button>
                         </div>
     
-                        <div class="see-moree" id="4">
+                        <div class="see-moree" id=4>
+                            <!--The background image behind "see-moree"-->
+                            <img class="background-image" src="images/verticalPicTest.jpeg">
+
+                            <p class="text-detail">
+                                huaeirfjkznd;erjldrrdijrdjri  irir ridirdir dirriurdridirgdirgx dr gdix rigdx ridgx irxdg
+                            </p>
+                            <div class="buttons">
+                                <button class="button-2 1" type="button"><span class="span-1"></span>Rules</button>
+                                <button class="button-2 2" type="button"><span class="span-1"></span>More Info</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--details ends-->
+        </div>
+
+        <!--Break between the two event categories-->
+        <div class="card-break"></div>
+        <!--Break ends-->
+
+        <!--Earth & Space Science-->
+        <div class="detail-card">
+            <div class="header-text">
+                Earth & Space Science
+                <div class="text-break"></div>
+            </div>
+
+            <!--Event Detail-->
+            <div class="event-detail-card">
+                <!--Dynamic Planet-->
+                <div class="individual-event-detail-card">
+                    <div class="the-detail">
+                        <div class="image-2" id="img-1"></div>
+
+                        <div class="event-detail">
+                            <h1>
+                                Dynamic Planet
+                                <div class="text-break"></div>
+                            </h1>
+                            <p>This is what this event is about</p>
+                            <button class="button-1" type="button" id=5><span class="span-1"></span>See More</button>
+                        </div>
+    
+                        <div class="see-moree" id=5>
+                            <!--The background image behind "see-moree"-->
+                            <img class="background-image" src="images/alsobigboi.jpeg">
+
                             <p class="text-detail">
                                 huaeirfjkznd;erjldrrdijrdjri  irir ridirdir dirriurdridirgdirgx dr gdix rigdx ridgx irxdg
                             </p>
@@ -180,10 +262,127 @@
                     </div>
                 </div>
 
+                <!--Meteorology-->
+                <div class="individual-event-detail-card">
+                    <div class="the-detail">
+                        <div class="image-2" id="img-2"></div>
 
-            <script src="show-on-scroll.js"></script>
-            <script src="see-more-detail.js"></script>
+                        <div class="event-detail">
+                            <h1>
+                                Meteorology
+                                <div class="text-break"></div>
+                            </h1>
+                            <p>This is what this event is about</p>
+                            <button class="button-1" type="button" id=6><span class="span-1"></span>See More</button>
+                        </div>
+    
+                        <div class="see-moree" id=6>
+                            <!--The background image behind "see-moree"-->
+                            <img class="background-image" src="images/1.jpg">
+
+                            <p class="text-detail">
+                                huaeirfjkznd;erjldrrdijrdjri  irir ridirdir dirriurdridirgdirgx dr gdix rigdx ridgx irxdg
+                            </p>
+                            <div class="buttons">
+                                <button class="button-2 1" type="button"><span class="span-1"></span>Rules</button>
+                                <button class="button-2 2" type="button"><span class="span-1"></span>More Info</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Road Scholar-->
+                <div class="individual-event-detail-card">
+                    <div class="the-detail">
+                        <div class="image-2" id="img-3"></div>
+
+                        <div class="event-detail">
+                            <h1>
+                                Road Scholar
+                                <div class="text-break"></div>
+                            </h1>
+                            <p>This is what this event is about</p>
+                            <button class="button-1" type="button" id=7><span class="span-1"></span>See More</button>
+                        </div>
+    
+                        <div class="see-moree" id=7>
+                            <!--The background image behind "see-moree"-->
+                            <img class="background-image" src="images/verticalPicTest.jpeg">
+                            
+                            <p class="text-detail">
+                                huaeirfjkznd;erjldrrdijrdjri  irir ridirdir dirriurdridirgdirgx dr gdix rigdx ridgx irxdg
+                            </p>
+                            <div class="buttons">
+                                <button class="button-2 1" type="button"><span class="span-1"></span>Rules</button>
+                                <button class="button-2 2" type="button"><span class="span-1"></span>More Info</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Rocks and Minerals-->
+                <div class="individual-event-detail-card">
+                    <div class="the-detail">
+                        <div class="image-2" id="img-4"></div>
+
+                        <div class="event-detail">
+                            <h1>
+                                Rocks and Minerals
+                                <div class="text-break"></div>
+                            </h1>
+                            <p>This is what this event is about</p>
+                            <button class="button-1" type="button" id=8><span class="span-1"></span>See More</button>
+                        </div>
+    
+                        <div class="see-moree" id=8>
+                            <!--The background image behind "see-moree"-->
+                            <img class="background-image" src="images/alsobigboi.jpeg">
+
+                            <p class="text-detail">
+                                huaeirfjkznd;erjldrrdijrdjri  irir ridirdir dirriurdridirgdirgx dr gdix rigdx ridgx irxdg
+                            </p>
+                            <div class="buttons">
+                                <button class="button-2 1" type="button"><span class="span-1"></span>Rules</button>
+                                <button class="button-2 2" type="button"><span class="span-1"></span>More Info</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Solar System-->
+                <div class="individual-event-detail-card">
+                    <div class="the-detail">
+                        <div class="image-2" id="img-5"></div>
+
+                        <div class="event-detail">
+                            <h1>
+                                Solar System
+                                <div class="text-break"></div>
+                            </h1>
+                            <p>This is what this event is about</p>
+                            <button class="button-1" type="button" id=9><span class="span-1"></span>See More</button>
+                        </div>
+    
+                        <div class="see-moree" id=9>
+                            <!--The background image behind "see-moree"-->
+                            <img class="background-image" src="images/bigBoi.jpeg">
+
+                            <p class="text-detail">
+                                huaeirfjkznd;erjldrrdijrdjri  irir ridirdir dirriurdridirgdirgx dr gdix rigdx ridgx irxdg
+                            </p>
+                            <div class="buttons">
+                                <button class="button-2 1" type="button"><span class="span-1"></span>Rules</button>
+                                <button class="button-2 2" type="button"><span class="span-1"></span>More Info</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--details ends-->
         </div>
-        <!--details ends-->
+
+
+        <script src="show-on-scroll.js"></script>
+        <script src="see-more-detail.js"></script>
     </body>
 </html>
