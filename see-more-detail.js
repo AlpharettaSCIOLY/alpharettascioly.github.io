@@ -3,7 +3,7 @@ var article;
 
 var num; 
 
-var buttons = document.getElementsByTagName("button");
+var buttons = document.querySelectorAll(".button-1");
 var buttonsCount = buttons.length;
 for (var i = 0; i <= buttonsCount; i += 1) {
     buttons[i].onclick = function(e) {
