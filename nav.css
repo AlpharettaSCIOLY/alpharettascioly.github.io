@@ -71,6 +71,12 @@
         top: -50%;
         left: 30%;
         transform: rotate(180deg);
+        transition: transform 0.5s ease-in-out;
+    }
+
+    /* Makes the chevron rotate when you hover over the options on the full desktop homepage */
+    .navigationBar ul li:hover .chevron {
+        transform: rotate(0deg);
     }
 
 
@@ -295,8 +301,8 @@
         width: 2rem;
         aspect-ratio: 1;
         border: 0;
-        top: 2rem; 
-        right: 10rem;
+        top: 1.5rem; 
+        right: 3rem;
     }
 
     .mobile-nav-toggle[aria-expanded="true"] {
@@ -366,6 +372,6 @@
 .does-it-fit {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }

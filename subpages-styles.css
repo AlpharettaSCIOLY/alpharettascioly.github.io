@@ -29,7 +29,7 @@
 }
 
 .header-text{
-    padding-top: 50px;
+    padding: 50px 20px 0 20px;
     color: white; 
     font-size: 40px;
     text-transform: uppercase;
@@ -62,18 +62,20 @@
     justify-content: center;
 }
 
-.calendar {
+.embedded-webpage {
     position: relative; 
     display: flex; 
     justify-content: center;
     padding: 20px;
+    background: black;
 }
 
-.calendar-link {
+.hypertext-link {
     position: relative;
     display: flex; 
     justify-content: center;
     padding: 40px;
+    color: white;
 }
 
 .center {
@@ -81,6 +83,10 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+}
+
+.detail-card {
+    background: black;
 }
 
 .detail_card_3 {
@@ -175,4 +181,28 @@
             background: black;
         }
     }
+}
+
+.subheader-text {
+    background: black;
+    color: white; 
+}
+
+.subheader-text h2 {
+    padding: 25px 0 0 20px;
+}
+
+.subheader-text h3 {
+    padding: 25px 0 0 20px;
+}
+
+.subheader-text p {
+    padding: 25px 0 0 20px;
+}
+
+.google-drive-box {
+    width: 90%;
+    border: 5px solid red;
+    border-radius: 15px;
+    background: white;
 }
