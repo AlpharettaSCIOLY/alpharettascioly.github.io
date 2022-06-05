@@ -206,3 +206,11 @@
     border-radius: 15px;
     background: white;
 }
+
+.google-maps-box {
+    width: 90%;
+    height: 80vh;
+    border: 5px solid red;
+    border-radius: 15px;
+    background: white;
+}
