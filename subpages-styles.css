@@ -211,6 +211,7 @@
     width: 90%;
     height: 80vh;
     border: 5px solid red;
+    border-style: dashed;
     border-radius: 15px;
     background: white;
 }
