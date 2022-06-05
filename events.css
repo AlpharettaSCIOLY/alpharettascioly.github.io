@@ -11,22 +11,6 @@
     justify-content: center;
 }
 
-.see-moree{
-    grid-column-start: 1;
-    grid-column-end: 3;
-    max-height: 0px;
-    overflow: hidden;
-    transition: max-height 0.5s ease-in-out;
-    position: relative;
-
-    display: flex; 
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-
-    background: black;
-}
-
 .text-detail{
     padding-top: 30px; 
     padding-left: 25px; 
@@ -49,6 +33,54 @@
 
 }
 
+.thedownarrowbuttondiv {
+    margin: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    overflow: visible
+}
+
+/*If I don't this, the butotn would be as wide as thedownarrowbuttondiv */
+.button-event {
+    background: transparent;
+    border: none;
+    height: 40px;
+}
+
+.chevron-event {
+    width: 35px;
+    transform: rotate(0deg);
+
+    transition: transform 0.5s ease-in-out;
+}
+
+.chevron-event.rotate {
+    transform: rotate(180deg);
+}
+
+.see-more-see-less-text-event {
+    text-align: center;
+    color: white;
+    font-weight: bolder;
+}
+
+.see-moree{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+    position: relative;
+
+    display: flex; 
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+
+    background: black;
+}
 
 .see-moree.expanded {
     max-height: 100rem;
