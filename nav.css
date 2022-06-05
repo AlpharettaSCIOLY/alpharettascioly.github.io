@@ -218,7 +218,6 @@
 
     @supports (backdrop-filter: blur(3rem)) {
         .navbar{
-            background: hsl(0 0% 100%/0.1);
             backdrop-filter: blur(3rem);
         }
     }   
@@ -327,7 +326,6 @@
 
     @supports (backdrop-filter: blur(3rem)) {
         .navbar{
-            background: hsl(0 0% 100%/0.1);
             backdrop-filter: blur(3rem);
         }
     }   
@@ -364,7 +362,6 @@
 
 @supports (backdrop-filter: blur(3rem)) {
     .header-blur{
-        background: hsl(0 0% 100%/0.1);
         backdrop-filter: blur(3rem);
     }
 } 
