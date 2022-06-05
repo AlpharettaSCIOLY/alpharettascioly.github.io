@@ -55,6 +55,10 @@
     overflow: hidden; 
 }
 
+.sign-up-btn {
+    max-width: 150px;
+}
+
 .span-1{
     background: #009688;
     height: 100%; 
