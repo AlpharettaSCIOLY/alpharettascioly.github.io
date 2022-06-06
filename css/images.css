@@ -1,0 +1,61 @@
+/* Any class with "image" will be affected by this stylesheet */
+.img_v1 {
+    border: 1em solid #fff;
+    border-radius: .25em;
+    box-shadow: 1em 1em 2em .25em rgba(0,0,0,.2);
+    margin: 2em auto;
+    max-width: 600px;
+
+    -webkit-transform: translateY(4em) rotateZ(-5deg);
+    transform: translateY(4em) rotateZ(-5deg);
+}
+
+.image.img_v1.is-visible{
+    opacity: 1;
+    -webkit-transform: translateY(0) rotateZ(-2deg);
+            transform: translateY(0) rotateZ(-2deg);
+}
+
+.img_v2 {
+    border: 1em solid #fff;
+    border-radius: .25em;
+    box-shadow: 1em 1em 2em .25em rgba(0,0,0,.2);
+    margin: 2em auto;
+
+    -webkit-transform: translateY(4em);
+    transform: translateY(4em);
+}
+
+.image.img_v2.is-visible{
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+}
+
+/* no borders and no rotateZ */
+.img_v3 {
+    border-radius: .25em;
+    box-shadow: 1em 1em 2em .25em rgba(0,0,0,.2);
+    margin: 2em auto;
+    max-width: 600px;
+
+    position: relative;
+    aspect-ratio: 1;
+
+    overflow: hidden;
+    border: none;
+}
+
+.image.img_v3.is-visible {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+}
+
+/* EVENTS => The images on the left */
+.image-events {
+    min-height: 300px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}

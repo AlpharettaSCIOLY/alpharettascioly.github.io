@@ -1,0 +1,21 @@
+/* Anything with a class of "text" will refer back to this css */
+
+.text_v1 {
+    box-sizing: border-box;
+    position: relative; 
+    background: white;
+    padding: 40px;
+    line-height: 1.7; 
+    border-radius: 20px;
+    margin: 20px auto;
+}
+
+.text_v2 {
+    color: white; 
+    font-size: 25px;
+
+    padding: 20px; 
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

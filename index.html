@@ -2,106 +2,147 @@
 <html lang="en"> 
     <head> 
         <meta charset="UTF-8">
-        <!---->
-        <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=5.0, minimum-scale=0.86">
 
+        <!--Allows the webpage to work with mobile (well, kind of so don't touch this)-->
+        <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=5.0, minimum-scale=0.86">
+        <!---->
+
+        <!--Title and Favicon image(the text and image that shows up on the tab bar on the browser)-->
         <title>AHS Science Olympiad</title>
         <link rel="icon" type="image/x-icon" href="images/Alpharetta_Logo.png"> 
+        <!---->
 
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="scroll.css">
-        <link rel="stylesheet" href="nav.css">
+        <!--The stylesheets used for this page-->
+        <link rel="stylesheet" href="css/Index_subpage/index.css">
+        <link rel="stylesheet" href="css/show-on-scroll.css">
+        <link rel="stylesheet" href="css/nav.css">
+        <link rel="stylesheet" href="css/text.css">
+        <link rel="stylesheet" href="css/images.css">
+        <link rel="stylesheet" href="css/detail_card_and_center.css">
+        <!--The stylesheets ends-->
     </head>
 
-    <!-- FIX THE BUTTON ON THE SIGN UP DETAIL CARD ON THE MOBILE VERSION -->
-
     <body> 
-    <!--navigation bar starts-->
-    <header>
-        <div class="header-blur"></div>
-        <div class="stuff">
-            <div class="header-logo">
-                <a href ="index.html"><img src="images/Alpharetta_Logo.png" class="logo"></a>
-            </div>  
+        <!--navigation bar starts-->
+        <header>
+            <!--The long hoorizontal black bar across the top and the background (and only the black bar)-->
+            <div class="header-blur"></div>
+            <!--header-blue ends-->
 
-            <buttton class="mobile-nav-toggle button-nav" aria-controls="primary-navigation" aria-expanded="false"></buttton>
+            <!--All the elements that make up the navigation bar (except for the black horizontal bar behind these elements)-->
+            <div class="navigation_bar">
+                <!--The logo on the top left corner of the website-->
+                <div class="header-logo">
+                    <a href ="index.html"><img src="images/Alpharetta_Logo.png" class="logo"></a>
+                </div>  
+                <!--header-logo ends-->
+                <link rel="icon" type="image/x-icon" href="images/Alpharetta_Logo.png"> 
+                <!--When the browser window gets to a certain size, the hamburger menu bar icon appears and all of the subpages on the navigation bar appears only when this button is pressed-->
+                <buttton class="hamburger-menu button-nav" aria-controls="primary-navigation" aria-expanded="false"></buttton>
+                <!--hamburger-menu ends-->
 
-            <nav class="navbar" data-visible="false" id="primary-navigation">
-                <div class="navigationBar">
-                    <ul class="primary-navigation">
-                        <li><a class="link" href="index.html">Home</a></li>
-                        <li>
-                            <div class="does-it-fit">
-                                <a class="link" href="events.html">Events</a>
-                                <div class="spacer">
-                                    <button class="menu" id=0>
-                                        <img class="chevron" src="images/chevron.png">
-                                    </button>
+                <!--
+                    navbar_subpage is the div that contains the where all of the subpages of the website are contained with("data-visible="false" 
+                    and id="primary-navigation" (related with 'class="primary-navigation"') is used to allow for smaller windows/mobile devices/transforms the full, desktop 
+                    navigation bar to the hamburger navigaion bar)
+                -->
+                <nav class="navigation_bar_subpages_dimensions" data-visible="false" id="primary-navigation">
+                    
+                    <!--Has the <ul> tag that has all of the subpages of the website-->
+                    <div class="navigation_bar_subpages">
+                        <!--The beginning of the <ul> tag that contains all of the subpages of the website-->
+                        <ul class="primary-navigation">
+                            <li><a class="link" href="index.html">Home</a></li>
+                            <!--The "Events" <li> tag has submenus of its own, therefore having more line of html than the other <li> tags-->
+                            <!--"Events" has the id of 0-->
+                            <li>
+                                <!--The main div that has the name of the submenu ("Events") on the left and the arrowhead/chevron on the right-->
+                                <div class="submenu_with_dropdown">
+                                    <!--The <a> tag that opens the main "Events" submenu, not the submenu under "Events" itself-->
+                                    <a class="link" href="events.html">Events</a>
+                                    <!--Because the arrowhead/chevron has a position of absolute, we need the spacer so that the right flexbox has enough space for the chevron-->
+                                    <div class="spacer">
+                                        <button class="dropdown_arrowhead" id=0>
+                                            <img class="chevron" src="images/chevron.png">
+                                        </button>
+                                    </div>
+                                    <!--spacer ends-->
                                 </div>
-                            </div>
-                            
-                            <ul class="dropdown" id=0>
-                                <li><a class="link" href="#">Stuff</a></li>
-                                <li><a class="link" href="results.html">Results</a></li> <!--Maybe a spreadsheet?-->
-                                <li><a class="link" href="location.html">Location</a></li>
-                            </ul>
-                        </li>
-                        <li><a class="link" href="calendar.html">Calendar</a></li>
-                        <li>
-                            <div class="does-it-fit">
-                                <a class="link" href="#">Resources</a>
-                                <div class="spacer">
-                                    <button class="menu" id=1>
-                                        <img class="chevron" src="images/chevron.png">
-                                    </button>
+                                <!--submenu-with-dropdown ends-->
+                                
+                                <ul class="dropdown" id=0>
+                                    <li><a class="link" href="results.html">Results</a></li>
+                                    <li><a class="link" href="location.html">Location</a></li>
+                                </ul>
+                            </li>
+                            <!--Events ends-->
+
+                            <li><a class="link" href="calendar.html">Calendar</a></li>
+
+                            <!--The "Resources" submenu is basically the same as the "Events" submenu-->
+                            <!--"Resources" has the id of 1-->
+                            <li>
+                                <div class="submenu_with_dropdown">
+                                    <a class="link" href="resources.html">Resources</a>
+                                    <div class="spacer">
+                                        <button class="menu" id=1>
+                                            <img class="chevron" src="images/chevron.png">
+                                        </button>
+                                    </div>
                                 </div>
-                            </div>
-                            <ul class="dropdown" id=1>
-                                <li><a class="link" href="meeting-notes.html">Meeting Notes</a></li>
-                                <li><a class="link" href="event-notes.html">Event Notes</a></li>
-                            </ul>
-                        </li>
-                        <li><a class="link" href="about-us.html">About Us</a></li>
-                        <li><a class="link" href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
+                                <ul class="dropdown" id=1>
+                                    <li><a class="link" href="meeting-notes.html">Meeting Notes</a></li>
+                                    <li><a class="link" href="event-notes.html">Event Notes</a></li>
+                                </ul>
+                            </li>
+                            <!--Resources ends-->
 
-        <script src="nav.js"></script>
-        <script src="navbar.js"></script>
-    </header>
-    <!--navigation bar ends-->
+                            <li><a class="link" href="about-us.html">About Us</a></li>
+                            <li><a class="link" href="contact.html">Contact</a></li>
+                        </ul>
+                        <!--primary_navigation ends-->
+                    </div>
+                    <!--navigation_bar_subpages ends-->
+                </nav>
+                <!--navigation_bar_subpages_dimensions ends-->
+            </div>
+            <!--navigation_bar ends-->
 
+            <script src="js/navigation_bar/hamburger_menu.js"></script>
+            <script src="js/navigation_bar/dropdown.js"></script>
+        </header>
+        <!--header ends-->
 
+        <!--The image that is visible in the background between the gaps between the detail_cards-->
         <div class="fixed_background"></div>
 
-        <div class="slideshow">
+        <!--The slideshow that you can see on the banner-->
+        <div>
             <div class="BannerTitle">
                 <h1>Alpharetta High School SCIOLY</h1>
                 <h2>Duct Tape and Hope</h2>
-                <p>The Science Olympiad Team located in<br>Alpharetta High School</p>
                 <div>
                     <a href="sign-up.html"><button class="button-1" type="button" ><span class="span-1"></span>Sign Up</button></a>
-                    <a href="Science_Olympiad_Div_C_2022_Rules.pdf" target="_blank"><button class="button-1" type="button"><span class="span-1"></span>About Us</button></a>
+                    <a href="PDFs/Science_Olympiad_Div_C_2022_Rules.pdf" target="_blank"><button class="button-1" type="button"><span class="span-1"></span>About Us</button></a>
                 </div>
             </div>
 
-            <div class="card">
+
+            <div class="slideshow_images">
                 <!-- Photo 1 -->
-                <div class="card_part card_part-one"></div>
+                <div class="slideshow_img image_one"></div>
             
                 <!-- Photo 2 -->
-                <div class="card_part card_part-two"></div>
+                <div class="slideshow_img image_two"></div>
         
                 <!-- Photo 3 -->
-                <div class="card_part card_part-three"></div>
+                <div class="slideshow_img image_three"></div>
             
                 <!-- Photo 4 -->
-                <div class="card_part card_part-four"></div>
+                <div class="slideshow_img image_four"></div>
 
                 <!-- Photo 5 (vertical photo test) -->
-                <div class="card_part card_part-five"></div>
+                <div class="slideshow_img image_five"></div>
             </div>
         </div>
   
@@ -110,13 +151,13 @@
             <h1 class="title-text">Welcome 👋</h1>
             <div class="text-break"></div>
         </div>
-        <div class="detail_card">
-            <div class="center">
-                <img class="image show-on-scroll" src="images/verticalPicTest.jpeg">
+        <div class="detail_card_v1">
+            <div class="center_v1">
+                <img class="image img_v1 show-on-scroll" src="images/verticalPicTest.jpeg">
             </div>
 
-            <div class="center">
-                <div class="text show-on-scroll">
+            <div class="center_v1">
+                <div class="text text_v1 show-on-scroll">
                 <h1>More on what we do</h1>
 
                 <p>We are the Alpharetta High School Science Olympiad Team
@@ -147,13 +188,13 @@
         <div class="title">
             <h1 class="title-text">Hello </h1>
         </div>
-        <div class="detail_card">
-            <div class="center">
-                <img class="image show-on-scroll" src="images/bigBoi.jpeg">
+        <div class="detail_card_v1">
+            <div class="center_v1">
+                <img class="image img_v1 show-on-scroll" src="images/bigBoi.jpeg">
             </div>
 
-            <div class="center">
-                <div class="text show-on-scroll">
+            <div class="center_v1">
+                <div class="text text_v1 show-on-scroll">
                     <h1>What is Science Olympiad?</h1>
                     <p> 
                         Science Olympiad is an organization where students all over the globe compete in STEM-based events. 
@@ -172,13 +213,13 @@
         <div class="break"></div>
 
         <!-- Info Card 3 -->
-        <div class="detail_card_4">
-            <div class="center">
-                <img class="image show-on-scroll" src="images/1.jpg">
+        <div class="detail_card_v4">
+            <div class="center_v1">
+                <img class="image img_v1 show-on-scroll" src="images/1.jpg">
             </div>
 
-            <div class="center-3">
-                <div class="text-2 padding show-on-scroll">
+            <div class="center_v3">
+                <div class="text text_v2 show-on-scroll">
                     <h1>Sign up</h1>
                     <div class="text-break"></div>
 
@@ -188,7 +229,6 @@
                 </div>  
                 <a href="sign-up.html"><button class="button-1 sign-up-btn" type="button"><span class="span-1"></span>Sign Up</button></a>
             </div>
-
         </div>
 
         <!-- Break -->
@@ -199,9 +239,9 @@
             <h1 class="title-text">Hello </h1>
             <div class="text-break"></div>
         </div>
-        <div class="detail_card_3">
-            <div class="center">
-                <div class="text show-on-scroll">
+        <div class="detail_card_v3">
+            <div class="center_v2">
+                <div class="text text_v1 show-on-scroll">
                     <h1>WOWOOWOWOWOOWOW</h1>
 
                     <p> 
@@ -215,8 +255,8 @@
                 </div>             
             </div>
 
-            <div class="center">
-                <img class="image show-on-scroll" src="images/scene.jpeg">
+            <div class="center_v1">
+                <img class="image img_v2 show-on-scroll" src="images/scene.jpeg">
             </div>
         </div>
 
@@ -228,8 +268,8 @@
             <h1 class="title-text">Hello, this is a title tghfghbvghnb bhn bghn vghnb vghbn vghnb qwertyuiopasdfghjklzxcvqewfrgtfdvrgthsrrsghsdftgfsgdsxfgdrxsgzsrsfzxdrfgzsreghzsdrhbdftxhdfthdfxtgbxdsghbnmqwertyuiopasdfghjklzxcvbnm,\</h1>
             <div class="text-break"></div>
         </div>
-        <div class="detail_card_3">
-            <div class="text-2 center-2 show-on-scroll">
+        <div class="detail_card_v3">
+            <div class="text text_v2 center_v2 show-on-scroll">
                 <p> 
                     (╯°□°)╯︵ ┻━┻(╯°□°)╯︵ ┻━┻(╯°□°)╯︵ ┻━┻(╯°□°)╯︵ ┻━┻(╯°□°)╯︵ ┻━┻(╯°□°)╯︵ ┻━┻(╯°□°)╯︵ ┻━┻(╯°□°)╯︵ ┻━┻
                     (╯°□°)╯︵ ┻━┻(╯°□°)╯︵ ┻━┻(╯°□°)╯︵ ┻━┻(╯°□°)╯︵ ┻━┻(╯°□°)╯︵ ┻━┻(╯°□°)╯︵ ┻━┻(╯°□°)╯︵ ┻━┻(╯°□°)╯︵ ┻━┻
@@ -239,8 +279,8 @@
                 </p>
             </div> 
             
-            <div class="cards center-2">
-                <img class="image2 show-on-scroll" src="images/1.jpg">
+            <div class="center_v2">
+                <img class="image img_v2 show-on-scroll" src="images/1.jpg">
             </div>
         </div>
 
@@ -252,21 +292,21 @@
             <h1 class="title-text">At AHS Science Olympiad, we prioritize winning 🥇, learning 📖, and having fun 😄</h1>
             <div class="text-break"></div>
         </div>
-        <div class="detail_card_2">
-            <div class="cards center-2">
-                <img class="image2 show-on-scroll" src="images/1.jpg">
+        <div class="detail_card_v2">
+            <div class="center_v2">
+                <img class="image img_v2 show-on-scroll" src="images/1.jpg">
                 <h1>Win</h1>
                 <p>Win by competing at UGA, Georgia Tech, and possibly California Institute of Technology (Cal Tech). 🚀</p>
             </div>
 
-            <div class="cards center-2">
-                <img class="image2 show-on-scroll" src="images/2.jpg">
+            <div class="center_v2">
+                <img class="image img_v2 show-on-scroll" src="images/2.jpg">
                 <h1>Learn</h1>
                 <p>SciOly offers many events. Whether it's building, testing, or lab events, you choose! 👷</p>
             </div>
 
-            <div class="cards center-2">
-                <img class="image2 show-on-scroll" src="images/3.jpg">
+            <div class="center_v2">
+                <img class="image img_v2 show-on-scroll" src="images/3.jpg">
                 <h1>Have Fun</h1>
                 <p>The Science Olympiad team is here to support your passion for science. We are a team efort. 😆</p>
             </div>
@@ -274,6 +314,6 @@
 
         <!-- JS script that adds 'is-visible' to any class with 'show-on-scroll' at the end -->
         <!-- (ex: 'image show-on-scroll' ==becomes==> 'image show-on-scroll is-visible') -->
-        <script src="show-on-scroll.js"></script>
+        <script src="js/show-on-scroll.js"></script>
     </body>
 </html>

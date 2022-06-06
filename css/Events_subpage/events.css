@@ -1,8 +1,9 @@
-.event-detail-card{
+.event-category-container{
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(6, auto);
     text-align: left;
+    background-color: black;
 }
 
 .individual-event-detail-card {
@@ -11,7 +12,7 @@
     justify-content: center;
 }
 
-.text-detail{
+.event-description-text-container{
     padding-top: 30px; 
     padding-left: 25px; 
     padding-right: 25px; 
@@ -19,21 +20,21 @@
     z-index: 3;
 }
 
-.the-text {
-        /* The rounded box around the text */
-        background: white;
-        padding: 40px;
-        border-radius: 20px;
+.event-description-text {
+    /* The rounded box around the text */
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
 }
 
-.buttons {
+.events_description_btn_container {
     display: flex;
     justify-content: center;
     padding: 20px;
 
 }
 
-.thedownarrowbuttondiv {
+.chevron-btn-container {
     margin: 20px;
     display: flex;
     justify-content: flex-end;
@@ -43,30 +44,30 @@
 }
 
 /*If I don't this, the butotn would be as wide as thedownarrowbuttondiv */
-.button-event {
+.button-events {
     background: transparent;
     border: none;
     height: 40px;
 }
 
-.chevron-event {
+.chevron-events {
     width: 35px;
     transform: rotate(0deg);
 
     transition: transform 0.5s ease-in-out;
 }
 
-.chevron-event.rotate {
+.chevron-events.rotate {
     transform: rotate(180deg);
 }
 
-.see-more-see-less-text-event {
+.see-more-see-less-text-events {
     text-align: center;
     color: white;
     font-weight: bolder;
 }
 
-.see-moree{
+.event-description{
     grid-column-start: 1;
     grid-column-end: 3;
     max-height: 0px;
@@ -82,16 +83,17 @@
     background: black;
 }
 
-.see-moree.expanded {
+.event-description.expanded {
     max-height: 100rem;
 }
 
-.the-detail{
+.event-details{
     display: grid; 
     grid-template-columns: repeat(2, 50%);
     grid-template-rows: repeat(2, auto);
     border: 3px solid black;
     border-radius: 15px;
+    background-color: grey;
      
     max-width: 1000px;
 
@@ -99,7 +101,7 @@
 }
 
 @media screen and (min-width: 1000px) {
-    .the-detail {
+    .event-details {
         min-width: 1000px;
         min-height: 300px; 
     }
@@ -115,77 +117,53 @@ button:hover{
     cursor: pointer;
 }
 
-
-.image-2 {
-    min-height: 300px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+#event-img-1 {
+    background-image: url(../../images/1.jpg);
 }
 
-#img-1 {
-    background-image: url("images/1.jpg");
+#event-img-2 {
+    background-image: url(../../images/2.jpg);
 }
 
-#img-2 {
-    background-image: url("images/2.jpg");
+#event-img-3 {
+    background-image: url(../../images/3.jpg);
 }
 
-#img-3 {
-    background-image: url("images/3.jpg");
+#event-img-4 {
+    background-image: url(../../images/4.jpg);
 }
 
-#img-4 {
-    background-image: url("images/4.jpg");
-}
-
-#img-5 {
-    background-image: url("images/1.jpg");
+#event-img-5 {
+    background-image: url(../../images/1.jpg);
 }
 
 
-.event-detail {
+.event-info {
     display: grid;
     grid-template-columns: repeat(1, 100%);
     grid-template-rows: repeat(3, auto); 
 }
 
-.event-detail h1{ 
+.event-info h1{ 
     color: white; 
     padding-left: 30px;
     padding-right: 30px;
     padding-top: 30px;
 }
 
-.event-detail p {
+.event-info p {
     color: white; 
     padding-left: 30px;
     padding-right: 30px;
 }
 
-.event-detail button{
+.event-info button{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.button-1{
-    max-width: 200px; 
-    max-height: 50px;
-    padding: 15px 0;
-    text-align: center;
-    margin: 20px;
-    border-radius: 25px;
-    font-weight: bold;
-    border: 2px solid #009688;
-    background: transparent; 
-    color: #fff;
-    cursor: pointer;
-    position: relative; 
-    overflow: hidden; 
-}
-
-.button-2 {
+.events_description_btn {
     width: 200px; 
     padding: 15px 0;
     text-align: center;
@@ -218,7 +196,7 @@ button:hover span{
     width: 100%;
 }
 
-.background-image {
+.event-description-background-image {
     /* Centered the image across row 2 */
     position: absolute; 
     top: 50%;
@@ -235,8 +213,4 @@ button:hover span{
     width: 100%;
     height: 50vh;
     background: transparent; 
-}
-
-.detail-card {
-    background: grey;
 }

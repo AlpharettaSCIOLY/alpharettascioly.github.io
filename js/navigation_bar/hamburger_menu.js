@@ -1,5 +1,9 @@
-const primaryNav = document.querySelector('.navbar');
-const navToggle = document.querySelector('.mobile-nav-toggle');
+/* 
+Enables the "hamburger_menu" to open and close the vertical list of subpages when clicked
+*/
+
+const primaryNav = document.querySelector('.navigation_bar_subpages_dimensions');
+const navToggle = document.querySelector('.hamburger_menu');
 
 // You can type what is being clicked on in '()' but since there's only one button here, it doesn't matter 
 navToggle.addEventListener("click", () => {

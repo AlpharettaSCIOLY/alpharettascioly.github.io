@@ -5,69 +5,107 @@
         <!---->
         <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=5.0, minimum-scale=0.86">
 
-        <title>Locations    </title>
-        <link rel="stylesheet" href="subpages-styles.css">
-        <link rel="stylesheet" href="nav.css">
-        <link rel="stylesheet" href="scroll.css">
+        <title>Location</title>
+        <link rel="icon" type="image/x-icon" href="images/Alpharetta_Logo.png"> 
+        
+        <link rel="stylesheet" href="css/subpages-styles.css">
+        <link rel="stylesheet" href="css/nav.css">
+        <link rel="stylesheet" href="css/show-on-scroll.css">
+        <link rel="stylesheet" href="css/text.css">
+        <link rel="stylesheet" href="css/images.css">
+        <link rel="stylesheet" href="css/detail_card_and_center.css">
     </head>
 
     <body>
- <!--navigation bar starts-->
- <header>
-    <div class="header-blur"></div>
-    <div class="stuff">
-        <div class="header-logo">
-            <a href ="index.html"><img src="images/Alpharetta_Logo.png" class="logo"></a>
-        </div>  
+        <!--navigation bar starts-->
+        <header>
+            <!--The long hoorizontal black bar across the top and the background (and only the black bar)-->
+            <div class="header-blur"></div>
+            <!--header-blue ends-->
 
-        <buttton class="mobile-nav-toggle button-nav" aria-controls="primary-navigation" aria-expanded="false"></buttton>
+            <!--All the elements that make up the navigation bar (except for the black horizontal bar behind these elements)-->
+            <div class="navigation_bar">
+                <!--The logo on the top left corner of the website-->
+                <div class="header-logo">
+                    <a href ="index.html"><img src="images/Alpharetta_Logo.png" class="logo"></a>
+                </div>  
+                <!--header-logo ends-->
+                <link rel="icon" type="image/x-icon" href="images/Alpharetta_Logo.png"> 
+                <!--When the browser window gets to a certain size, the hamburger menu bar icon appears and all of the subpages on the navigation bar appears only when this button is pressed-->
+                <buttton class="hamburger-menu button-nav" aria-controls="primary-navigation" aria-expanded="false"></buttton>
+                <!--hamburger-menu ends-->
 
-        <nav class="navbar" data-visible="false" id="primary-navigation">
-            <div class="navigationBar">
-                <ul class="primary-navigation">
-                    <li><a class="link" href="index.html">Home</a></li>
-                    <li>
-                        <div class="does-it-fit">
-                            <a class="link" href="events.html">Events</a>
-                            <div class="spacer">
-                                <button class="menu" id=0>
-                                    <img class="chevron" src="images/chevron.png">
-                                </button>
-                            </div>
-                        </div>
-                        
-                        <ul class="dropdown" id=0>
-                            <li><a class="link" href="#">Stuff</a></li>
-                            <li><a class="link" href="#">Results</a></li> <!--Maybe a spreadsheet?-->
-                            <li><a class="link" href="location.html">Location</a></li>
+                <!--
+                    navbar_subpage is the div that contains the where all of the subpages of the website are contained with("data-visible="false" 
+                    and id="primary-navigation" (related with 'class="primary-navigation"') is used to allow for smaller windows/mobile devices/transforms the full, desktop 
+                    navigation bar to the hamburger navigaion bar)
+                -->
+                <nav class="navigation_bar_subpages_dimensions" data-visible="false" id="primary-navigation">
+                    
+                    <!--Has the <ul> tag that has all of the subpages of the website-->
+                    <div class="navigation_bar_subpages">
+                        <!--The beginning of the <ul> tag that contains all of the subpages of the website-->
+                        <ul class="primary-navigation">
+                            <li><a class="link" href="index.html">Home</a></li>
+                            <!--The "Events" <li> tag has submenus of its own, therefore having more line of html than the other <li> tags-->
+                            <!--"Events" has the id of 0-->
+                            <li>
+                                <!--The main div that has the name of the submenu ("Events") on the left and the arrowhead/chevron on the right-->
+                                <div class="submenu_with_dropdown">
+                                    <!--The <a> tag that opens the main "Events" submenu, not the submenu under "Events" itself-->
+                                    <a class="link" href="events.html">Events</a>
+                                    <!--Because the arrowhead/chevron has a position of absolute, we need the spacer so that the right flexbox has enough space for the chevron-->
+                                    <div class="spacer">
+                                        <button class="dropdown_arrowhead" id=0>
+                                            <img class="chevron" src="images/chevron.png">
+                                        </button>
+                                    </div>
+                                    <!--spacer ends-->
+                                </div>
+                                <!--submenu-with-dropdown ends-->
+                                
+                                <ul class="dropdown" id=0>
+                                    <li><a class="link" href="results.html">Results</a></li>
+                                    <li><a class="link" href="location.html">Location</a></li>
+                                </ul>
+                            </li>
+                            <!--Events ends-->
+
+                            <li><a class="link" href="calendar.html">Calendar</a></li>
+
+                            <!--The "Resources" submenu is basically the same as the "Events" submenu-->
+                            <!--"Resources" has the id of 1-->
+                            <li>
+                                <div class="submenu_with_dropdown">
+                                    <a class="link" href="resources.html">Resources</a>
+                                    <div class="spacer">
+                                        <button class="menu" id=1>
+                                            <img class="chevron" src="images/chevron.png">
+                                        </button>
+                                    </div>
+                                </div>
+                                <ul class="dropdown" id=1>
+                                    <li><a class="link" href="meeting-notes.html">Meeting Notes</a></li>
+                                    <li><a class="link" href="event-notes.html">Event Notes</a></li>
+                                </ul>
+                            </li>
+                            <!--Resources ends-->
+
+                            <li><a class="link" href="about-us.html">About Us</a></li>
+                            <li><a class="link" href="contact.html">Contact</a></li>
                         </ul>
-                    </li>
-                    <li><a class="link" href="calendar.html">Calendar</a></li>
-                    <li>
-                        <div class="does-it-fit">
-                            <a class="link" href="#">Resources</a>
-                            <div class="spacer">
-                                <button class="menu" id=1>
-                                    <img class="chevron" src="images/chevron.png">
-                                </button>
-                            </div>
-                        </div>
-                        <ul class="dropdown" id=1>
-                            <li><a class="link" href="meeting-notes.html">Meeting Notes</a></li>
-                            <li><a class="link" href="event-notes.html">Event Notes</a></li>
-                        </ul>
-                    </li>
-                    <li><a class="link" href="about-us.html">About Us</a></li>
-                    <li><a class="link" href="contact.html">Contact</a></li>
-                </ul>
+                        <!--primary_navigation ends-->
+                    </div>
+                    <!--navigation_bar_subpages ends-->
+                </nav>
+                <!--navigation_bar_subpages_dimensions ends-->
             </div>
-        </nav>
-    </div>
+            <!--navigation_bar ends-->
 
-    <script src="nav.js"></script>
-    <script src="navbar.js"></script>
-</header>
-<!--navigation bar ends-->
+            <script src="js/navigation_bar/hamburger_menu.js"></script>
+            <script src="js/navigation_bar/dropdown.js"></script>
+        </header>
+        <!--header ends-->
 
         <!--banner starts-->
         <div class="banner">
@@ -79,14 +117,14 @@
         <!--banner ends-->
 
         <!--details starts-->
-        <div class="detail-card">
+        <div class="detail_card_v8">
             <div class="header-text">
                 Locations
                 <div class="text-break"></div>
             </div>
 
-            <div class="embedded-webpage">
-                <div class="google-embed-box">
+            <div class="embed-box-container">
+                <div class="embed-box">
                     <iframe src="https://www.google.com/maps/d/u/5/embed?mid=1bKT7dsWq3JNgyQYwwnrub98obRnPADk&ehbc=2E312F" width=100% height=100%></iframe>
                 </div>
             </div>
@@ -94,7 +132,7 @@
             <div class="hypertext-link">
                 <p>If the calendar above doesn't work, you can try opening <a href="https://www.google.com/maps/d/u/5/embed?mid=1bKT7dsWq3JNgyQYwwnrub98obRnPADk&ehbc=2E312F">this</a> link instead.</p>
             </div>    
-            <script src="show-on-scroll.js"></script>
+            <script src="js/show-on-scroll.js"></script>
         </div>
         <!--details ends-->
     </body>

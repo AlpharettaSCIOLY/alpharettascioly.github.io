@@ -77,7 +77,7 @@ button:hover span{
 }
 
 /* slideshow stuff*/
-.card {
+.slideshow_images {
   position: relative;
   z-index: -1;
   width: 100%;
@@ -86,7 +86,7 @@ button:hover span{
 }
 
 /*Light blue cover above the slide show*/
-.card::after {
+.slideshow_images::after {
   content: '';
   position: absolute;
   left: 0;
@@ -100,7 +100,7 @@ button:hover span{
   background-color: rgba(119, 103, 115, 0.2);
 }
 
-.card_part {
+.slideshow_img{
   position: absolute;
   top: 0;
   left: 0;
@@ -111,7 +111,7 @@ button:hover span{
   height: 100%;
   
   transform: translateX( 100% );
-  background-image: url( images/image.jpg );
+  background-image: url(../../images/image.jpg );
   background-color: rgba(0,0,0,0.7);
   background-blend-mode: multiply;
   background-size: cover;
@@ -122,26 +122,23 @@ button:hover span{
 
 
 
-.card_part.card_part-two {
-  background-image: url( images/1.jpg);
+.slideshow_img.image_two {
+  background-image: url( ../../images/1.jpg);
   animation-delay: 10s;
 }
 
-.card_part.card_part-three {
-
-  background-image: url( images/scene.jpeg );
+.slideshow_img.image_three {
+  background-image: url( ../../images/scene.jpeg );
   animation-delay: 20s;
 }
 
-.card_part.card_part-four {
-
-  background-image: url( images/alsobigboi.jpeg );
+.slideshow_img.image_four {
+  background-image: url( ../../images/alsobigboi.jpeg );
   animation-delay: 30s;
 }
 
-.card_part.card_part-five {
-
-  background-image: url( images/verticalPicTest.jpeg );
+.slideshow_img.image_five {
+  background-image: url( ../../images/verticalPicTest.jpeg );
   animation-delay: 40s;
 }
 
@@ -182,75 +179,21 @@ button:hover span{
     margin-bottom: 20px
 }
 
-.detail_card {    
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-    grid-auto-rows: minmax(85vh, auto);
-    padding-top: 20px;
-    padding-bottom: 20px;
-    overflow-x: hidden;
-    background: black;
-}
 
-.detail_card_2 {
-    display: grid;
-    grid-template-columns: repeat(3, 33.34%);
-    grid-auto-rows: minmax(75vh, auto);
-    padding-top: 20px;
-    padding-bottom: 25px;
-    background: black;
-    color: white;
-    
-}
 
-.detail_card_2 h1{
+.detail_card_v2 h1{
     margin-bottom: 25px;
 }
 
-.center-3{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+
+
+
+
+
+.detail_card_v3.center_v1.image.is-visible {
+    height: 10000px;
 }
 
-.center-2{
-    display: flex;
-    align-items: center;
-    text-align: center;
-    flex-direction: column;
-}
-
-.center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-.detail_card_3 {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    background: black;
-}
-
-.detail_card_4{
-    display: grid;
-    grid-template-columns: 60% 40%;
-    grid-auto-rows: minmax(65vh, auto);
-    padding-top: 20px;
-    padding-bottom: 20px;
-    background: black;
-}
-
-.padding {
-    padding: 20px; 
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
 
 .break {
     position: relative; 
@@ -262,7 +205,7 @@ button:hover span{
 .fixed_background {
     position: fixed; 
     overflow: hidden;   
-    background-image: url(images/vector.webp);
+    background-image: url( ../../images/vector.webp );
     background-size: cover;
     background-position: center;
     width: 100vw;
@@ -278,7 +221,7 @@ button:hover span{
         font-family: sans-serif;
         overflow-x: hidden;
     }
-    .detail_card_2 {
+    .detail_card_v2 {
         display: grid;
         grid-template-columns: 1fr;
         grid-auto-rows: repeat(3, 33.34%);

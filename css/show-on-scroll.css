@@ -1,0 +1,66 @@
+.image {
+        opacity: 0;
+        -webkit-transition: opacity .3s .25s ease-out,
+                -webkit-transform 4s .25s cubic-bezier(0,1,.3,1);
+        transition: opacity .3s .25s ease-out,
+                -webkit-transform 4s .25s cubic-bezier(0,1,.3,1);
+        transition: transform 4s .25s cubic-bezier(0,1,.3,1),
+                opacity .3s .25s ease-out;
+        transition: transform 4s .25s cubic-bezier(0,1,.3,1),
+                opacity .3s .25s ease-out,
+                -webkit-transform 4s .25s cubic-bezier(0,1,.3,1);
+        width: 90%;
+
+        will-change: transform, opacity;
+}
+
+/* The image "transform" type is under "img_v(#)" in index.css and subpages-styles.css */
+
+/* Just make it so that the border is added by the individual css pages instead of having a border and no border version of image 2 */
+/* Actually, just have image and add like an ID or another class to add the styling separate from scroll.css*/
+
+.text {
+        opacity: 0;
+        -webkit-transform: translateY(8em);
+                transform: translateY(8em);
+        -webkit-transition: opacity .3s .25s ease-out,
+                -webkit-transform 4s .25s cubic-bezier(0,1,.3,1);
+        transition: opacity .3s .25s ease-out,
+                -webkit-transform 4s .25s cubic-bezier(0,1,.3,1);
+        transition: transform 4s .25s cubic-bezier(0,1,.3,1),
+                opacity .3s .25s ease-out;
+        transition: transform 4s .25s cubic-bezier(0,1,.3,1),
+                opacity .3s .25s ease-out,
+                -webkit-transform 4s .25s cubic-bezier(0,1,.3,1);
+
+        will-change: transform, opacity;
+}
+
+.text.is-visible {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+}
+
+.individual-event-detail-card {
+        opacity: 0;
+        -webkit-transform: translateY(8em);
+                transform: translateY(8em);
+        -webkit-transition: opacity .3s .25s ease-out,
+                -webkit-transform 4s .25s cubic-bezier(0,1,.3,1);
+        transition: opacity .3s .25s ease-out,
+                -webkit-transform 4s .25s cubic-bezier(0,1,.3,1);
+        transition: transform 4s .25s cubic-bezier(0,1,.3,1),
+                opacity .3s .25s ease-out;
+        transition: transform 4s .25s cubic-bezier(0,1,.3,1),
+                opacity .3s .25s ease-out,
+                -webkit-transform 4s .25s cubic-bezier(0,1,.3,1);
+
+        will-change: transform, opacity;
+}
+
+.individual-event-detail-card.is-visible {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+}
