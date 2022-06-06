@@ -201,7 +201,6 @@
         padding: 2em; 
         background: hsl(0 0% 0%/ 0.75);
         overflow: scroll;
-        font-size: 45px;
 
         text-decoration-color: aliceblue;
         /* Moves the menu off of the screen */
@@ -276,17 +275,22 @@
             position: fixed;
             inset: 0 0 0 0;
     
-            padding-top: 2em;
+            padding-top: 3.5em;
             padding-left: 1em; 
             padding-right: 0;
             background: hsl(0 0% 0%/ 0.75);
             overflow: scroll;
-            font-size: 38px;
     
             text-decoration-color: aliceblue;
             /* Moves the menu off of the screen */
             transform: translateX(100%);            
             transition: transform 350ms ease;
+        }
+
+        .navigation_bar_subpages ul li{
+            padding-bottom: 45px;
+            font-size: 30px;
+            font-weight: bolder;
         }
     }
 }
