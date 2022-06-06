@@ -1,3 +1,16 @@
+.fixed_background {
+    position: fixed; 
+    overflow: hidden;   
+    background-image: url( ../../images/otherBackground.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100%;
+    z-index: -1;
+}
+
+
+
 .event-category-container{
     display: grid;
     grid-template-columns: 1fr;
@@ -6,33 +19,78 @@
     background-color: black;
 }
 
+
+
 .individual-event-detail-card {
     padding: 25px;
     display: flex;
     justify-content: center;
 }
 
-.event-description-text-container{
-    padding-top: 30px; 
-    padding-left: 25px; 
-    padding-right: 25px; 
-    color: black;
-    z-index: 3;
+
+
+.event-details{
+    display: grid; 
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(2, auto);
+    border: 3px solid black;
+    border-radius: 15px;
+    background-color: grey;
+     
+    max-width: 1000px;
+
+    overflow:hidden;
+}
+@media screen and (min-width: 1000px) {
+    .event-details {
+        min-width: 1000px;
+        min-height: 300px; 
+    }
 }
 
-.event-description-text {
-    /* The rounded box around the text */
-    background: white;
-    padding: 40px;
-    border-radius: 20px;
+
+
+#event-img-1 {
+    background-image: url(../../images/1.jpg);
+}
+#event-img-2 {
+    background-image: url(../../images/2.jpg);
+}
+#event-img-3 {
+    background-image: url(../../images/3.jpg);
+}
+#event-img-4 {
+    background-image: url(../../images/4.jpg);
+}
+#event-img-5 {
+    background-image: url(../../images/1.jpg);
 }
 
-.events_description_btn_container {
+
+
+.event-info {
+    display: grid;
+    grid-template-columns: repeat(1, 100%);
+    grid-template-rows: repeat(3, auto); 
+}
+.event-info h1{ 
+    color: white; 
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+}
+.event-info p {
+    color: white; 
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.event-info button{
     display: flex;
     justify-content: center;
-    padding: 20px;
-
+    align-items: center;
 }
+
+
 
 .chevron-btn-container {
     margin: 20px;
@@ -43,12 +101,23 @@
     overflow: visible
 }
 
-/*If I don't this, the butotn would be as wide as thedownarrowbuttondiv */
+
+
+.see-more-see-less-text-events {
+    text-align: center;
+    color: white;
+    font-weight: bolder;
+}
+
+
+
 .button-events {
     background: transparent;
     border: none;
     height: 40px;
 }
+
+
 
 .chevron-events {
     width: 35px;
@@ -56,16 +125,11 @@
 
     transition: transform 0.5s ease-in-out;
 }
-
 .chevron-events.rotate {
     transform: rotate(180deg);
 }
 
-.see-more-see-less-text-events {
-    text-align: center;
-    color: white;
-    font-weight: bolder;
-}
+
 
 .event-description{
     grid-column-start: 1;
@@ -82,86 +146,53 @@
 
     background: black;
 }
-
 .event-description.expanded {
     max-height: 100rem;
 }
 
-.event-details{
-    display: grid; 
-    grid-template-columns: repeat(2, 50%);
-    grid-template-rows: repeat(2, auto);
-    border: 3px solid black;
-    border-radius: 15px;
-    background-color: grey;
-     
-    max-width: 1000px;
 
-    overflow:hidden;
-}
 
-@media screen and (min-width: 1000px) {
-    .event-details {
-        min-width: 1000px;
-        min-height: 300px; 
-    }
-}
+.event-description-background-image {
+    /* Centered the image across row 2 */
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
-@media screen and (max-width: 1000px) {
-    *{
-        overflow-x: hidden;
-    }
-}
-
-button:hover{
-    cursor: pointer;
-}
-
-#event-img-1 {
-    background-image: url(../../images/1.jpg);
-}
-
-#event-img-2 {
-    background-image: url(../../images/2.jpg);
-}
-
-#event-img-3 {
-    background-image: url(../../images/3.jpg);
-}
-
-#event-img-4 {
-    background-image: url(../../images/4.jpg);
-}
-
-#event-img-5 {
-    background-image: url(../../images/1.jpg);
+    width: 100%; 
+    z-index: 1;
+    opacity: 0.7;   
 }
 
 
-.event-info {
-    display: grid;
-    grid-template-columns: repeat(1, 100%);
-    grid-template-rows: repeat(3, auto); 
+
+.event-description-text-container{
+    padding-top: 30px; 
+    padding-left: 25px; 
+    padding-right: 25px; 
+    color: black;
+    z-index: 3;
 }
 
-.event-info h1{ 
-    color: white; 
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 30px;
+
+
+.event-description-text {
+    /* The rounded box around the text */
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
 }
 
-.event-info p {
-    color: white; 
-    padding-left: 30px;
-    padding-right: 30px;
-}
 
-.event-info button{
+
+.events_description_btn_container {
     display: flex;
     justify-content: center;
-    align-items: center;
+    padding: 20px;
+
 }
+
+
 
 .events_description_btn {
     width: 200px; 
@@ -179,6 +210,8 @@ button:hover{
     z-index: 2; 
 }
 
+
+
 .span-1{
     background: #009688;
     height: 100%; 
@@ -188,29 +221,33 @@ button:hover{
     left: 0;
     bottom: 0; 
     z-index: -1;
-    transition: 0.5s; 
-    z-index: -1;  
+    transition: 0.5s;   
 }
-
-button:hover span{
+.events_description_btn:hover .span-1{
     width: 100%;
 }
 
-.event-description-background-image {
-    /* Centered the image across row 2 */
-    position: absolute; 
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 
-    width: 100%; 
-    z-index: 1;
-    opacity: 0.7;   
-}
 
 .card-break{
     position: relative; 
     width: 100%;
     height: 50vh;
     background: transparent; 
+}
+
+
+
+
+/* miscellaneous */
+@media screen and (max-width: 1000px) {
+    *{
+        overflow-x: hidden;
+    }
+}
+
+
+
+button:hover{
+    cursor: pointer;
 }

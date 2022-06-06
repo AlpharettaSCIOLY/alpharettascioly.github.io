@@ -42,6 +42,7 @@
                 transform: translateY(0);
 }
 
+/* The event detail cards in the "Events" submenu */
 .individual-event-detail-card {
         opacity: 0;
         -webkit-transform: translateY(8em);

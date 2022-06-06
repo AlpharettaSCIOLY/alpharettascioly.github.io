@@ -5,17 +5,7 @@
     font-family: sans-serif; 
 }
 
-.banner-image {
-    height: 100vh;
-    position: relative;
-    background-size: cover;
-    background-image: url(../images/verticalPicTest.jpeg);
-    /* Adds the "filter" over the background image */
-    background-color: rgba(0,0,0,0.7);
-    background-blend-mode: multiply;
-    
-    background-position: center;
-}
+
 
 .banner-title {
     position: absolute; 
@@ -28,13 +18,42 @@
     text-transform: uppercase;
 }
 
-.header-text{
+
+
+.banner-image {
+    height: 100vh;
+    position: relative;
+    background-size: cover;
+    background-image: url(../images/verticalPicTest.jpeg);
+    /* Adds the "filter" over the background image */
+    background-color: rgba(0,0,0,0.7);
+    background-blend-mode: multiply;
+    
+    background-position: center;
+}
+
+
+
+.header_text_v1 {
     padding: 50px 20px 0 20px;
     color: white; 
     font-size: 40px;
     text-transform: uppercase;
     background-color: black;
 }
+/* Instead of "header-text", the events page uses "title-text" */
+.header_text_v2 {
+    font-size: 50px;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: bolder;
+    background-color: black;
+    padding: 50px 20px 0 20px;
+}
+
 
 
 .text-break{
@@ -45,12 +64,42 @@
     margin-top: 15px; 
 }
 
+
+
+.subheader-text {
+    background: black;
+    color: white; 
+}
+.subheader-text h2 {
+    padding: 25px 0 0 20px;
+}
+.subheader-text h3 {
+    padding: 25px 0 0 20px;
+}
+.subheader-text p {
+    padding: 25px 0 0 20px;
+}
+
+
+
+/* used for Mrs. Adegbaju's picture on "about-us" */
 .images {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
+
+
+.backgroundImg {
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
 
 .embed-box-container {
     position: relative; 
@@ -59,6 +108,19 @@
     padding: 20px;
     background: black;
 }
+
+
+
+.embed-box {
+    width: 90%;
+    height: 80vh;
+    border: 5px solid red;
+    border-style: dashed;
+    border-radius: 15px;
+    background: white;
+}
+
+
 
 .hypertext-link {
     position: relative;
@@ -70,29 +132,10 @@
 }
 
 
-/* We're keeping this until we konw for sure this isn't being used */
-.detail-card {
-    background: black;
-}
-
-.detail_card_v3 {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-auto-rows: minmax(70vh, auto);
-    background: black;
-}
-
-.title-text {
-    font-size: 50px;
-    text-align: center;
-    color: white;
-    text-transform: uppercase;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    font-weight: bolder;
-}
 
 
+
+/* miscellaneous */
 .break {
     position: relative; 
     width: 100%;
@@ -100,37 +143,14 @@
     background: transparent; 
 }
 
+
+
 /* detail card for the captians */
-
-.detail_card_v2 {
-    display: grid;
-    grid-template-columns: repeat(4, 25%);
-    grid-auto-rows: minmax(60vh, auto);
-    padding-top: 20px;
-    padding-bottom: 25px;
-    background: black;
-    color: white;
-    align-items: center;
-}
-
 .detail_card_v2 h1{
     font-size: 25px;
     margin-bottom: 25px;
 }
 
-.center_v2{
-    display: flex;
-    align-items: center;
-    text-align: center;
-    flex-direction: column;
-}
-
-.backgroundImg {
-    position: absolute; 
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
 
 
 @media (max-width: 1024px) {
@@ -138,6 +158,9 @@
         overflow-x: hidden;
     }
 
+
+
+    /* Makes the list of captains go from being listed out horizontally to vertically */
     .detail_card_v2 {
         display: grid;
         grid-template-columns: 1fr;
@@ -147,9 +170,13 @@
         background: black;
     }
 
+
+
     .backgroundImg {
         width: 70vh;
     }
+
+
 
     @media (max-width: 600px) {
         .detail_card_v3 {
@@ -159,41 +186,4 @@
             background: black;
         }
     }
-}
-
-.subheader-text {
-    background: black;
-    color: white; 
-}
-
-.subheader-text h2 {
-    padding: 25px 0 0 20px;
-}
-
-.subheader-text h3 {
-    padding: 25px 0 0 20px;
-}
-
-.subheader-text p {
-    padding: 25px 0 0 20px;
-}
-
-.embed-box {
-    width: 90%;
-    height: 80vh;
-    border: 5px solid red;
-    border-style: dashed;
-    border-radius: 15px;
-    background: white;
-}
-
-/* for the contact-us.html page */
-.detail_card_v4{
-    display: grid;
-    grid-template-columns: 60% 40%;
-    grid-auto-rows: minmax(65vh, auto);
-    padding-top: 20px;
-    padding-bottom: 20px;
-    background: black;
-    line-height: 2;
 }

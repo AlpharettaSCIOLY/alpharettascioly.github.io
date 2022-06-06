@@ -1,7 +1,7 @@
 /* 
 Enables the arrowheads/chevron to open and close the dropdown menu when clicked on the vertical list of subpages
 */
-var btn = document.querySelectorAll(".dropdown-arrowhead");
+var btn = document.querySelectorAll(".dropdown_arrowhead");
 var btnCount = btn.length;
 
 for (var i = 0; i <= btnCount; i += 1) {

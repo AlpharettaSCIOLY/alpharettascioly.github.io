@@ -1,6 +1,55 @@
+.header-blur {
+    position: fixed;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 80px; 
+    background: hsl(0 0% 0%/ 0.75);
+    z-index: 10;
+}
+@supports (backdrop-filter: blur(3rem)) {
+    .header-blur{
+        backdrop-filter: blur(3rem);
+    }
+}
+
+
+
+.navigation_bar {
+    position: fixed;
+    width: 100vw;
+    height: 70px; 
+    text-align: center;
+    text-decoration-color: aliceblue;
+    z-index: 1000;
+}
+
+
+
+.header-logo { 
+    position: absolute; 
+    top: calc(0% + 0.55rem);
+    left: 5%;
+    display: flex; 
+    align-items: center;
+    justify-content: left;
+}
+
+
+
+.logo{
+    width: 55px;
+    cursor: pointer; 
+}
+
+
+
 .hamburger-menu { 
     display: none;
 }
+
+
+
 
 .navigation_bar_subpages{
     width: 85%;
@@ -10,19 +59,12 @@
     align-items: center;
     justify-content: right;
 }
-
-.logo{
-    width: 55px;
-    cursor: pointer; 
-}
-
 .navigation_bar_subpages ul li{
     list-style: none; 
     display: inline-block; 
     margin: 0 20px;
     position: relative;
 }
-
 .navigation_bar_subpages ul li a{
     text-decoration: none;
     color: #fff;
@@ -32,62 +74,16 @@
 
     text-transform: uppercase; 
 }
-
-/* This is only for the navigation bar dropdown menu */
+/* This somehow gets rid of a mysterious white dot on th bottom left covern of the flexbox that the chevron image is in */
 .navigation_bar_subpages ul li button {
-    text-decoration: none;
-    color: #fff;
-    display: block; 
-    line-height: 60px;
-    white-space: nowrap;
-
-    text-transform: uppercase; 
+    background: transparent;
     border: none; 
-    background: none;
 }
-
 .navigation_bar_subpages ul ul {
     position: absolute; 
     top: 60px; 
     display: none;
 }
-
-@media screen and (min-width: 1051px) {
-    .navigation_bar_subpages ul li:hover > ul {
-        display: block; 
-        z-index: 100000000;
-        width: fit-content;
-    }
-
-    .navigation_bar_subpages ul li ul li {
-        display: flex;
-        flex-direction: column;
-        background-color: hsl(0 0% 50%/ 0.75);
-    }
-
-    .chevron {
-        width: 26px;
-
-        position: absolute;
-        top: -50%;
-        left: 30%;
-        transform: rotate(180deg);
-        transition: transform 0.5s ease-in-out;
-    }
-
-    /* Makes the chevron rotate when you hover over the options on the full desktop homepage */
-    .navigation_bar_subpages ul li:hover .chevron {
-        transform: rotate(0deg);
-    }
-
-
-    .spacer {
-        position: relative;
-        width: 30px;
-        height: 10px;
-    }
-}
-
 .navigation_bar_subpages ul ul li{
     padding-right: 20px;
     padding-left: 20px;
@@ -99,12 +95,22 @@
     transform: translateX(-20px);
 }
 
+
+
+.submenu_with_dropdown {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+
 .link {
     position: relative;
     width: fit-content;
     height: fit-content;
 }
-
 .link::after{
     content: '';
     height: 3px;
@@ -116,13 +122,78 @@
     transition: 0.5s; 
     z-index: 10000; 
 }
-
 .link:hover::after {
     width: 100%;
 }
 
+
+
+
+
+
+@media screen and (min-width: 1051px) {
+    .navigation_bar_subpages ul li:hover > ul {
+        display: block; 
+        z-index: 100000000;
+        width: fit-content;
+    }
+    .navigation_bar_subpages ul li ul li {
+        display: flex;
+        flex-direction: column;
+        background-color: hsl(0 0% 50%/ 0.75);
+    }
+
+
+
+    .spacer {
+        position: relative;
+        width: 30px;
+        height: 10px;
+    }
+
+
+
+    .chevron {
+        width: 26px;
+
+        position: absolute;
+        top: -50%;
+        left: 30%;
+        transform: rotate(180deg);
+        transition: transform 0.5s ease-in-out;
+    }
+    /* Makes the chevron rotate when you hover over the options on the full desktop homepage */
+    .navigation_bar_subpages ul li:hover .chevron {
+        transform: rotate(0deg);
+    }
+}
+
+
+
+
+
 /*Make sure the smaller screenn gets a smaller font */
 @media screen and (max-width: 1050px) {
+    .hamburger-menu { 
+        display: block;
+        position: absolute;
+        z-index: 1000;
+        background-image: url(../images/Hamburger_Icon.png); 
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        width: 2rem;
+        aspect-ratio: 1;
+        border: 0;
+        top: 1.5rem; 
+        right: 3rem;
+    }
+    .hamburger-menu[aria-expanded="true"] {
+        background-image: url(../images/Icon_Close.png);
+    }
+
+
+
     .navigation_bar_subpages_dimensions{ 
         position: fixed;
         inset: 0 0 0 30%;
@@ -137,11 +208,15 @@
         transform: translateX(100%); 
         transition: transform 350ms ease-in-out;
     }
-
-
     .navigation_bar_subpages_dimensions[data-visible="true"] {
         transform: translateX(0);
     }
+    @supports (backdrop-filter: blur(3rem)) {
+        .navigation_bar_subpages_dimensions{
+            backdrop-filter: blur(3rem);
+        }
+    } 
+
 
     .navigation_bar_subpages{
         width: 100%;
@@ -150,60 +225,36 @@
         display: flex;
         justify-content: flex-start;
     }
-
-    .navigation_bar_subpages ul li{
-        padding-bottom: 50px;
-    }
-
     .navigation_bar_subpages ul {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(5, auto);
+        grid-template-rows: repeat(6, auto);
         text-align: left;
     }
-
+    .navigation_bar_subpages ul li{
+        padding-bottom: 50px;
+        font-size: 45px;
+        font-weight: bolder;
+    }
     .navigation_bar_subpages ul ul {
         max-height: 0px;
         overflow: hidden;
-        transition: max-height 0.5s ease;
+        transition: max-height 0.5s ease-in-out;
 
         position: relative; 
         top: calc(0% + 40px);
-        left: calc(0% + 3rem);
+        left: calc(0% + 15px);
 
         display: block;
     }
-
-    .navignavigation_bar_subpagesationBar ul ul.expanded{
+    .navigation_bar_subpages ul ul.expanded{
         max-height: 1000px;
     }
-    
     .navigation_bar_subpages ul ul li{
         white-space: nowrap;
     }
 
-    .navigation_bar_subpages ul li button {
-        font-size: 45px;
-    }  
 
-    .hamburger-menu { 
-        display: block;
-        position: absolute;
-        z-index: 1000;
-        background-image: url(../images/Hamburger_Icon.png); 
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
-        width: 2rem;
-        aspect-ratio: 1;
-        border: 0;
-        top: 1.5rem; 
-        right: 3rem;
-    }
-
-    .hamburger-menu[aria-expanded="true"] {
-        background-image: url(../images/Icon_Close.png);
-    }
     
     .chevron {
         width: 45px;
@@ -212,164 +263,30 @@
     
         transition: transform 0.5s ease-in-out;
     }
-    
     .chevron.rotate {
         transform: rotate(180deg);
-    }
-
-    @supports (backdrop-filter: blur(3rem)) {
-        .navigation_bar_subpages_dimensions{
-            backdrop-filter: blur(3rem);
-        }
-    }   
-}
+    }  
 
 
-@media screen and (max-width: 900px) {
-    .navigation_bar_subpages_dimensions{ 
-        position: fixed;
-        inset: 0 0 0 0;
 
-        padding-top: 2em;
-        padding-left: 1em; 
-        padding-right: 0;
-        background: hsl(0 0% 0%/ 0.75);
-        overflow: scroll;
-        font-size: 38px;
 
-        text-decoration-color: aliceblue;
-        /* Moves the menu off of the screen */
-        transform: translateX(100%);            
-        transition: transform 350ms ease;
-    }
 
-    .navigation_bar_subpages_dimensions[data-visible="true"] {
-        transform: translateX(0);
-    }
-
-    .navigation_bar_subpages{
-        width: 100%;
-        padding: 10px 0;
-
-        display: flex;
-        justify-content: flex-start;
-    }
-
-    .navigation_bar_subpages ul li{
-        padding-bottom: 50px;
-    }
-
-    .navigation_bar_subpages ul {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(6, auto);
-        text-align: left;
-    }
-
-    .navigation_bar_subpages ul ul {
-        max-height: 0px;
-        transform: rotate(0deg);
-        overflow: hidden;
-        transition: max-height 0.5s ease-in, transform 0.5s linear;
-
-        position: relative; 
-        top: calc(0% + 40px);
-        left: calc(0% + 15px);
-
-        display: block;
-    }
-
-    .navigation_bar_subpages ul ul.expanded{
-        max-height: 1000px;
-    }
-
-    .navigation_bar_subpages ul ul.expanded img {
-        transform: rotate(180deg);
-    }
-    .navigation_bar_subpages ul ul li{
-        white-space: nowrap;
-    }
-
-    .hamburger-menu { 
-        display: block;
-        position: absolute;
-        z-index: 1000;
-        background-image: url(../images/Hamburger_Icon.png); 
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
-        width: 2rem;
-        aspect-ratio: 1;
-        border: 0;
-        top: 1.5rem; 
-        right: 3rem;
-    }
-
-    .hamburger-menu[aria-expanded="true"] {
-        background-image: url(../images/Icon_Close.png);
-    }
-
-    .navigation_bar_subpages ul li button {
-        font-size: 38px;
-    }
-
-    .chevron {
-        width: 38px;
-        transform: rotate(0deg);
-        margin: 7px;
+    @media screen and (max-width: 900px) {
+        .navigation_bar_subpages_dimensions{ 
+            position: fixed;
+            inset: 0 0 0 0;
     
-        transition: transform 0.5s ease-in-out;
-    }
+            padding-top: 2em;
+            padding-left: 1em; 
+            padding-right: 0;
+            background: hsl(0 0% 0%/ 0.75);
+            overflow: scroll;
+            font-size: 38px;
     
-    .chevron.rotate {
-        transform: rotate(180deg);
-    }
-
-    @supports (backdrop-filter: blur(3rem)) {
-        .navigation_bar_subpages_dimensions{
-            backdrop-filter: blur(3rem);
+            text-decoration-color: aliceblue;
+            /* Moves the menu off of the screen */
+            transform: translateX(100%);            
+            transition: transform 350ms ease;
         }
-    }   
-}
-
-
-.navigation_bar {
-    position: fixed;
-    width: 100vw;
-    height: 70px; 
-    text-align: center;
-    text-decoration-color: aliceblue;
-    z-index: 1000;
-}
-
-.header-logo { 
-    position: absolute; 
-    top: calc(0% + 0.55rem);
-    left: 5%;
-    display: flex; 
-    align-items: center;
-    justify-content: left;
-}
-
-.header-blur {
-    position: fixed;
-    top: 0%;
-    left: 0;
-    width: 100%;
-    height: 80px; 
-    background: hsl(0 0% 0%/ 0.75);
-    z-index: 10;
-}
-
-@supports (backdrop-filter: blur(3rem)) {
-    .header-blur{
-        backdrop-filter: blur(3rem);
     }
-} 
-
-.submenu_with_dropdown {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
 }

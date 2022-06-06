@@ -69,6 +69,16 @@
     background-color: black;
 }
 
+.detail_card_v9 { /* detail_card_v5 but without "align-items: center" */
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-auto-rows: minmax(60vh, auto);
+    padding-top: 20px;
+    padding-bottom: 25px;
+    background: black;
+    color: white;
+}
+
 
 /* Center */
 .center_v1 {

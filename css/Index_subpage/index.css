@@ -4,9 +4,31 @@
     padding: 0;
     font-family: sans-serif; 
 }
+@media (max-width: 550px) {
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        overflow-x: hidden;
+    }
+}
 
-/* Make sure the banner title doesn't go off screen when the screen gets too small */
-/* Do something like I did for the cards */
+
+
+.fixed_background {
+    position: fixed; 
+    overflow: hidden;   
+    background-image: url( ../../images/vector.webp );
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100%;
+    z-index: -1;
+}
+
+
+
 .BannerTitle{ 
     width: 100%; 
     position: absolute;
@@ -15,21 +37,18 @@
     text-align: center;
     color: #fff;
 }
-
 .BannerTitle h1{ 
     font-size: 70px;
     margin-top: 80px;
 
     -webkit-text-stroke: 3px #000;
 }
-
 .BannerTitle h2{
     font-size: 40px; 
     margin-top: 25px;
 
     -webkit-text-stroke: 3px #000;
 }
-
 .BannerTitle p{
     margin: 20px auto;
     font-weight: 100;
@@ -38,9 +57,9 @@
     -webkit-text-stroke: 0.5px #000;
 }
 
-/* Make sure that we have button classes for the different types of buttons now */
 
-.button-1{
+
+.button-index {
     width: 200px; 
     padding: 15px 0;
     text-align: center;
@@ -54,11 +73,6 @@
     position: relative; 
     overflow: hidden; 
 }
-
-.sign-up-btn {
-    max-width: 150px;
-}
-
 .span-1{
     background: #009688;
     height: 100%; 
@@ -71,10 +85,14 @@
     transition: 0.5s; 
     z-index: -1;  
 }
-
+.sign-up-btn {
+    max-width: 150px;
+}
 button:hover span{
     width: 100%;
 }
+
+
 
 /* slideshow stuff*/
 .slideshow_images {
@@ -84,8 +102,6 @@ button:hover span{
   height: 100vh;    
   overflow: hidden;
 }
-
-/*Light blue cover above the slide show*/
 .slideshow_images::after {
   content: '';
   position: absolute;
@@ -99,6 +115,8 @@ button:hover span{
 
   background-color: rgba(119, 103, 115, 0.2);
 }
+
+
 
 .slideshow_img{
   position: absolute;
@@ -119,46 +137,39 @@ button:hover span{
   
   animation: opaqTransition 50s cubic-bezier(0, 0, 0, 1) infinite;
 }
-
-
-
 .slideshow_img.image_two {
   background-image: url( ../../images/1.jpg);
   animation-delay: 10s;
 }
-
 .slideshow_img.image_three {
   background-image: url( ../../images/scene.jpeg );
   animation-delay: 20s;
 }
-
 .slideshow_img.image_four {
   background-image: url( ../../images/alsobigboi.jpeg );
   animation-delay: 30s;
 }
-
 .slideshow_img.image_five {
   background-image: url( ../../images/verticalPicTest.jpeg );
   animation-delay: 40s;
 }
-
-
-
 @keyframes opaqTransition {
     3% { transform: translateX( 0 ); }
     25% { transform: translateX( 0 ); }
     28% { transform: translateX( -100% ); }
     100% { transform: translateX( -100% ); }
-  }
+}
   
 
-/* The information part of the homepage */ 
 
+/* The information part of the homepage */ 
 .title {
     position: relative; 
     background-color: black;
     padding: 20px 0;
 }
+
+
 
 .title-text {
     font-size: 50px;
@@ -169,6 +180,8 @@ button:hover span{
     text-overflow: ellipsis;
     font-weight: bolder;
 }
+
+
 
 .text-break{
     content: '';
@@ -181,18 +194,14 @@ button:hover span{
 
 
 
+/* detail_cards that have additional styling on its texts/images/buttons */
 .detail_card_v2 h1{
     margin-bottom: 25px;
 }
-
-
-
-
-
-
 .detail_card_v3.center_v1.image.is-visible {
     height: 10000px;
 }
+
 
 
 .break {
@@ -202,25 +211,11 @@ button:hover span{
     background: transparent; 
 }
 
-.fixed_background {
-    position: fixed; 
-    overflow: hidden;   
-    background-image: url( ../../images/vector.webp );
-    background-size: cover;
-    background-position: center;
-    width: 100vw;
-    height: 100%;
-    z-index: -1;
-}
 
+
+
+/* miscellaneous */
 @media (max-width: 550px) {
-    *{
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        font-family: sans-serif;
-        overflow-x: hidden;
-    }
     .detail_card_v2 {
         display: grid;
         grid-template-columns: 1fr;
