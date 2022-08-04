@@ -100,3 +100,34 @@
     justify-content: center;
     flex-direction: column;
 }
+
+
+@media screen and (max-width: 900px) {
+    .detail_card_v1 {    
+        display: grid;
+        /* grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); */
+        grid-template-columns: 100%;
+        grid-auto-rows: minmax(85vh, auto);
+        padding-top: 20px;
+        padding-bottom: 20px;
+        overflow-x: hidden;
+        background: black;
+    }
+
+    .detail_card_v6 {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-auto-rows: minmax(40vh, auto);
+        background: black;
+    }
+
+    .detail_card_v9 {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-auto-rows: minmax(60vh, auto);
+        padding-top: 20px;
+        padding-bottom: 25px;
+        background: black;
+        color: white;
+    }
+}
