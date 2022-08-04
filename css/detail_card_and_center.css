@@ -107,10 +107,29 @@
         display: grid;
         /* grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); */
         grid-template-columns: 100%;
-        grid-auto-rows: minmax(85vh, auto);
+        grid-auto-rows: minmax(30vh, auto);
         padding-top: 20px;
         padding-bottom: 20px;
         overflow-x: hidden;
+        background: black;
+    }
+
+    .detail_card_v3 {
+        display: flex;
+        flex-direction: column;
+        column-width: 100%;
+        align-content: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        background: black;
+    }    
+
+    .detail_card_v4{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-auto-rows: minmax(40vh, auto);
+        padding-top: 20px;
+        padding-bottom: 20px;
         background: black;
     }
 
