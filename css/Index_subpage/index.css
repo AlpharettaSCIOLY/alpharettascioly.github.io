@@ -181,6 +181,16 @@ button:hover span{
     font-weight: bolder;
 }
 
+.title-text-v2 {
+    font-size: 50px;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: bolder;
+    padding: 30px 0;
+}
+
 
 
 .text-break{
