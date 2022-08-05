@@ -117,7 +117,7 @@
     .detail_card_v2 {
         display: grid;
         grid-template-columns: 100%;
-        grid-auto-rows: minmax(75vh, auto);
+        grid-auto-rows: minmax(70vh, auto);
         padding-top: 20px;
         padding-bottom: 25px;
         background: black;
