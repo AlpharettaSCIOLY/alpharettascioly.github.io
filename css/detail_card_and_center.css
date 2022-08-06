@@ -101,6 +101,7 @@
     flex-direction: column;
 }
 
+
 .overflow-hidden {
     overflow: hidden;
 }
@@ -108,7 +109,6 @@
 .overflow-visible {
     overflow: visible;
 }
-
 
 
 @media screen and (max-width: 900px) {
