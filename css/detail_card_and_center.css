@@ -108,7 +108,7 @@
 }
 
 .overflow-visible {
-    overflow: visible
+    overflow-y: visible;
 }
 
 
