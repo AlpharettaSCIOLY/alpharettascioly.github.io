@@ -169,14 +169,3 @@
         color: white;
     }
 }
-
-/* Hide scrollbar for Chrome, Safari and Opera */
-.overflow-visible::-webkit-scrollbar {
-display: none;
-}
-
-/* Hide scrollbar for IE, Edge add Firefox */
-.overflow-visible {
--ms-overflow-style: none;
-scrollbar-width: none; /* Firefox */
-}
