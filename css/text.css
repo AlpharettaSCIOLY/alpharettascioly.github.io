@@ -24,3 +24,7 @@
     font-size: 3vh;
     padding: 0 3vw;
 }
+
+.text_word_wrap {
+    word-wrap: break-word;
+}
