@@ -28,3 +28,10 @@
 .text_word_wrap {
     word-wrap: break-word;
 }
+
+.text_v3 {
+    color: white;
+    font-size: 25px; 
+
+    text-decoration: None;
+}
